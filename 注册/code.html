@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="dark" lang="zh-CN"><head>
+﻿<!DOCTYPE html><html lang="zh-CN"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>注册 - LogIntel 智能日志分析系统</title>
@@ -11,57 +11,57 @@
         theme: {
           extend: {
             colors: {
-              "surface": "#0e0e0e",
-              "on-background": "#ffffff",
-              "secondary": "#ca7bff",
+              "surface": "#ffffff",
+              "on-background": "#352E2A",
+              "secondary": "#B07A47",
               "inverse-surface": "#fcf8f8",
-              "tertiary-fixed-dim": "#de7afd",
+              "tertiary-fixed-dim": "#B9824A",
               "on-secondary": "#360056",
               "inverse-on-surface": "#565554",
-              "tertiary-fixed": "#e68fff",
-              "tertiary-container": "#de7afd",
+              "tertiary-fixed": "#C58B52",
+              "tertiary-container": "#B9824A",
               "on-tertiary-container": "#420057",
               "on-tertiary": "#54006e",
               "on-primary-fixed": "#3f0044",
               "error-dim": "#d73357",
               "primary-container": "#df7be0",
-              "surface-container-lowest": "#000000",
+              "surface-container-lowest": "#ffffff",
               "secondary-fixed-dim": "#e2b1ff",
-              "primary": "#fa93fa",
+              "primary": "#8A5A2B",
               "outline-variant": "#494847",
               "on-tertiary-fixed": "#2d003d",
               "on-primary": "#64006c",
               "on-secondary-fixed-variant": "#7b10b9",
               "on-secondary-fixed": "#530081",
-              "secondary-dim": "#ca7bff",
-              "tertiary-dim": "#d875f7",
+              "secondary-dim": "#B07A47",
+              "tertiary-dim": "#AE7440",
               "outline": "#777575",
-              "surface-bright": "#2d2c2c",
-              "surface-tint": "#fa93fa",
+              "surface-bright": "#ffffff",
+              "surface-tint": "#8A5A2B",
               "on-error": "#490013",
-              "surface-dim": "#0e0e0e",
+              "surface-dim": "#f3f4f6",
               "error-container": "#a70138",
               "secondary-fixed": "#eac4ff",
-              "surface-variant": "#262625",
-              "on-surface": "#ffffff",
-              "surface-container-highest": "#262625",
+              "surface-variant": "#e5e7eb",
+              "on-surface": "#352E2A",
+              "surface-container-highest": "#E7D8C1",
               "on-primary-container": "#430048",
-              "secondary-container": "#7b0fb9",
-              "tertiary": "#e68fff",
+              "secondary-container": "#8c623a",
+              "tertiary": "#C58B52",
               "error": "#ff6e84",
               "on-tertiary-fixed-variant": "#62007f",
-              "on-surface-variant": "#adaaaa",
-              "background": "#0e0e0e",
-              "surface-container": "#1a1919",
-              "primary-fixed": "#fa93fa",
+              "on-surface-variant": "#352E2A",
+              "background": "#EBDEC6",
+              "surface-container": "#F7F2E8",
+              "primary-fixed": "#8A5A2B",
               "on-error-container": "#ffb2b9",
-              "surface-container-high": "#201f1f",
-              "surface-container-low": "#141313",
-              "primary-fixed-dim": "#eb86ec",
-              "primary-dim": "#eb86ec",
+              "surface-container-high": "#EFE4D2",
+              "surface-container-low": "#F3EBDD",
+              "primary-fixed-dim": "#7A4E26",
+              "primary-dim": "#7A4E26",
               "on-primary-fixed-variant": "#6f1076",
               "on-secondary-container": "#f2d5ff",
-              "inverse-primary": "#943899"
+              "inverse-primary": "#8A5A2B"
             },
             fontFamily: {
               "headline": ["Manrope"],
@@ -80,11 +80,11 @@
             vertical-align: middle;
         }
         body {
-            background-color: #010101;
+            background-color: #EBDEC6;
             overflow-x: hidden;
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: #F7F2E8;
             backdrop-filter: blur(40px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -107,7 +107,54 @@
         .strength-weak { background-color: #ff6e84; }
         .strength-medium { background-color: #FFD700; }
         .strength-strong { background-color: #00FF00; }
-    </style>
+            .glass-card,
+        .glass-panel,
+        .obsidian-card,
+        .bg-surface-container,
+        .bg-surface-container-high,
+        .bg-surface-container-highest,
+        .bg-surface-container-low {
+            color: #352E2A;
+        }
+        .glass-card .text-white,
+        .glass-panel .text-white,
+        .obsidian-card .text-white,
+        .bg-surface-container .text-white,
+        .bg-surface-container-high .text-white,
+        .bg-surface-container-highest .text-white,
+        .bg-surface-container-low .text-white,
+        .glass-card .text-white\/90,
+        .glass-panel .text-white\/90,
+        .obsidian-card .text-white\/90,
+        .glass-card .text-white\/80,
+        .glass-panel .text-white\/80,
+        .obsidian-card .text-white\/80,
+        .glass-card .text-white\/70,
+        .glass-panel .text-white\/70,
+        .obsidian-card .text-white\/70,
+        .glass-card .text-white\/60,
+        .glass-panel .text-white\/60,
+        .obsidian-card .text-white\/60,
+        .glass-card .text-white\/50,
+        .glass-panel .text-white\/50,
+        .obsidian-card .text-white\/50,
+        .glass-card .text-white\/40,
+        .glass-panel .text-white\/40,
+        .obsidian-card .text-white\/40,
+        .glass-card .text-white\/30,
+        .glass-panel .text-white\/30,
+        .obsidian-card .text-white\/30 {
+            color: #6B625B !important;
+        }            :root {
+            --unified-text-color: #352E2A;
+        }
+        body,
+        h1, h2, h3, h4, h5, h6,
+        p, span, a, button, label,
+        li, td, th,
+        input, textarea, select {
+            color: var(--unified-text-color) !important;
+        }    </style>
 </head>
 <body class="font-body text-on-background selection:bg-primary/30">
 <!-- Ambient Background Lighting -->
@@ -255,3 +302,12 @@
 </div>
 </footer>
 </body></html>
+
+
+
+
+
+
+
+
+

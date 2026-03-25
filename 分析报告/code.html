@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html class="dark" lang="zh-CN">
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -13,55 +13,55 @@
             theme: {
                 extend: {
                     colors: {
-                        "surface-variant": "#262625",
-                        "surface": "#0e0e0e",
-                        "primary-dim": "#eb86ec",
+                        "surface-variant": "#e5e7eb",
+                        "surface": "#ffffff",
+                        "primary-dim": "#7A4E26",
                         "on-tertiary-fixed-variant": "#62007f",
-                        "inverse-primary": "#943899",
+                        "inverse-primary": "#8A5A2B",
                         "error-container": "#a70138",
                         "secondary-fixed-dim": "#e2b1ff",
-                        "on-surface": "#ffffff",
+                        "on-surface": "#352E2A",
                         "error": "#ff6e84",
                         "secondary-fixed": "#eac4ff",
-                        "secondary-dim": "#ca7bff",
-                        "background": "#0e0e0e",
-                        "tertiary": "#e68fff",
+                        "secondary-dim": "#B07A47",
+                        "background": "#EBDEC6",
+                        "tertiary": "#C58B52",
                         "on-primary": "#64006c",
-                        "primary": "#fa93fa",
-                        "surface-tint": "#fa93fa",
+                        "primary": "#8A5A2B",
+                        "surface-tint": "#8A5A2B",
                         "error-dim": "#d73357",
-                        "surface-container-highest": "#262625",
-                        "surface-container": "#1a1919",
+                        "surface-container-highest": "#E7D8C1",
+                        "surface-container": "#F7F2E8",
                         "on-tertiary-fixed": "#2d003d",
-                        "surface-container-low": "#141313",
-                        "primary-fixed-dim": "#eb86ec",
-                        "tertiary-dim": "#d875f7",
-                        "tertiary-fixed": "#e68fff",
-                        "tertiary-fixed-dim": "#de7afd",
-                        "tertiary-container": "#de7afd",
+                        "surface-container-low": "#F3EBDD",
+                        "primary-fixed-dim": "#7A4E26",
+                        "tertiary-dim": "#AE7440",
+                        "tertiary-fixed": "#C58B52",
+                        "tertiary-fixed-dim": "#B9824A",
+                        "tertiary-container": "#B9824A",
                         "on-secondary-fixed": "#530081",
-                        "secondary-container": "#7b0fb9",
+                        "secondary-container": "#8c623a",
                         "on-secondary": "#360056",
                         "on-primary-fixed-variant": "#6f1076",
                         "on-error-container": "#ffb2b9",
-                        "secondary": "#ca7bff",
-                        "primary-fixed": "#fa93fa",
+                        "secondary": "#B07A47",
+                        "primary-fixed": "#8A5A2B",
                         "on-primary-fixed": "#3f0044",
                         "on-error": "#490013",
                         "inverse-on-surface": "#565554",
                         "primary-container": "#df7be0",
-                        "surface-bright": "#2d2c2c",
-                        "surface-container-lowest": "#000000",
+                        "surface-bright": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
                         "on-primary-container": "#430048",
                         "outline": "#777575",
-                        "on-surface-variant": "#adaaaa",
+                        "on-surface-variant": "#352E2A",
                         "on-secondary-fixed-variant": "#7b10b9",
-                        "surface-dim": "#0e0e0e",
+                        "surface-dim": "#f3f4f6",
                         "outline-variant": "#494847",
                         "on-tertiary-container": "#420057",
-                        "on-background": "#ffffff",
+                        "on-background": "#352E2A",
                         "on-tertiary": "#54006e",
-                        "surface-container-high": "#201f1f",
+                        "surface-container-high": "#EFE4D2",
                         "on-secondary-container": "#f2d5ff",
                         "inverse-surface": "#fcf8f8"
                     },
@@ -80,55 +80,102 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: #F7F2E8;
             backdrop-filter: blur(12px);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         .obsidian-bg {
-            background-color: #010101;
+            background-color: #EBDEC6;
         }
         .text-glow-primary {
             text-shadow: 0 0 10px rgba(250, 147, 250, 0.4);
         }
-    </style>
+            .glass-card,
+        .glass-panel,
+        .obsidian-card,
+        .bg-surface-container,
+        .bg-surface-container-high,
+        .bg-surface-container-highest,
+        .bg-surface-container-low {
+            color: #352E2A;
+        }
+        .glass-card .text-white,
+        .glass-panel .text-white,
+        .obsidian-card .text-white,
+        .bg-surface-container .text-white,
+        .bg-surface-container-high .text-white,
+        .bg-surface-container-highest .text-white,
+        .bg-surface-container-low .text-white,
+        .glass-card .text-white\/90,
+        .glass-panel .text-white\/90,
+        .obsidian-card .text-white\/90,
+        .glass-card .text-white\/80,
+        .glass-panel .text-white\/80,
+        .obsidian-card .text-white\/80,
+        .glass-card .text-white\/70,
+        .glass-panel .text-white\/70,
+        .obsidian-card .text-white\/70,
+        .glass-card .text-white\/60,
+        .glass-panel .text-white\/60,
+        .obsidian-card .text-white\/60,
+        .glass-card .text-white\/50,
+        .glass-panel .text-white\/50,
+        .obsidian-card .text-white\/50,
+        .glass-card .text-white\/40,
+        .glass-panel .text-white\/40,
+        .obsidian-card .text-white\/40,
+        .glass-card .text-white\/30,
+        .glass-panel .text-white\/30,
+        .obsidian-card .text-white\/30 {
+            color: #6B625B !important;
+        }            :root {
+            --unified-text-color: #352E2A;
+        }
+        body,
+        h1, h2, h3, h4, h5, h6,
+        p, span, a, button, label,
+        li, td, th,
+        input, textarea, select {
+            color: var(--unified-text-color) !important;
+        }    </style>
 </head>
 <body class="obsidian-bg text-on-surface font-body selection:bg-primary/30">
 <!-- Side Navigation -->
-<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#0e0e0e] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#B57743] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
 <div class="py-8 px-6">
 <h1 class="font-headline font-black text-white text-xl tracking-tight">智能日志分析系统</h1>
 <p class="font-label text-[10px] uppercase tracking-widest text-white/40 mt-1">Luminous Obsidian AI</p>
 </div>
 <nav class="flex flex-col px-4 space-y-2 mt-4">
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../工作台/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../工作台/code.html">
 <span class="material-symbols-outlined">dashboard</span>
 <span class="font-label text-sm uppercase tracking-widest">工作台</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white/10 text-white border-r-4 border-[#C967E8] backdrop-blur-md transition-all duration-300" href="../日志上传/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] border-r-4 border-[#A8733A] backdrop-blur-md transition-all duration-300" href="../日志上传/code.html">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>analytics</span>
 <span class="font-label text-sm uppercase tracking-widest">日志分析</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../问题中心/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../问题中心/code.html">
 <span class="material-symbols-outlined">biotech</span>
 <span class="font-label text-sm uppercase tracking-widest">问题处理</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../历史日志存档/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../历史日志存档/code.html">
 <span class="material-symbols-outlined">history_edu</span>
 <span class="font-label text-sm uppercase tracking-widest">历史与知识</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../规则配置管理/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../规则配置管理/code.html">
 <span class="material-symbols-outlined">settings_suggest</span>
 <span class="font-label text-sm uppercase tracking-widest">系统管理</span>
 </a>
 </nav>
 <div class="mt-auto px-6 py-8">
-<button class="w-full py-3 rounded-xl bg-gradient-to-r from-[#FA93FA] via-[#C967E8] to-[#983AD6] text-on-primary font-bold text-sm shadow-lg active:scale-95 transition-transform mb-6">导出报告</button>
+<button class="w-full py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] font-bold text-sm shadow-lg hover:bg-[#EFE4D2] active:scale-95 transition-transform mb-6">导出报告</button>
 <div class="flex flex-col space-y-3">
-<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#">
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#">
 <span class="material-symbols-outlined text-sm">help</span>
 <span>帮助中心</span>
 </a>
-<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#">
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#">
 <span class="material-symbols-outlined text-sm">description</span>
 <span>技术文档</span>
 </a>
@@ -153,12 +200,16 @@
 <button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors">
 <span class="material-symbols-outlined">widgets</span>
 </button>
-<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative">
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative" id="notificationBellBtn">
 <span class="material-symbols-outlined">notifications</span>
-<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+<span class="hidden absolute -top-0.5 -right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-error text-[10px] leading-4 text-white text-center" id="notificationBellBadge"></span>
 </button>
-<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30 cursor-pointer">
-<img alt="用户头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+<div class="w-8 h-8 rounded-full border border-primary/30 cursor-pointer relative" id="user-avatar-nav">
+<img alt="用户头像" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+<div class="hidden absolute top-full right-0 mt-2 w-48 rounded-xl bg-[#F7F2E8]/95 backdrop-blur-xl border border-[#D8C7AE] shadow-xl z-50" id="userAvatarMenu">
+<a href="../个人页面/code.html" class="block px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors border-b border-[#E2D5C2]/80 first:rounded-t-xl">个人页面</a>
+<button id="logoutBtn" class="w-full text-left px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors last:rounded-b-xl">退出登录</button>
+</div>
 </div>
 </div>
 </div>
@@ -249,8 +300,8 @@
 <span class="" style="">数据库异常</span>
 <span class="" style="">64 (50%)</span>
 </div>
-<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-<div class="h-full bg-gradient-to-r from-primary to-secondary w-1/2 rounded-full"></div>
+<div class="h-2 w-full bg-[#E6D9C7] rounded-full overflow-hidden">
+<div class="h-full bg-[#7B5EA7] w-1/2 rounded-full"></div>
 </div>
 </div>
 <div class="space-y-2">
@@ -258,8 +309,8 @@
 <span class="" style="">网络异常</span>
 <span class="" style="">32 (25%)</span>
 </div>
-<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-<div class="h-full bg-secondary w-1/4 rounded-full opacity-80"></div>
+<div class="h-2 w-full bg-[#E6D9C7] rounded-full overflow-hidden">
+<div class="h-full bg-[#2F7A8C] w-1/4 rounded-full"></div>
 </div>
 </div>
 <div class="space-y-2">
@@ -267,8 +318,8 @@
 <span class="" style="">权限认证错误</span>
 <span class="" style="">19 (15%)</span>
 </div>
-<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-<div class="h-full bg-tertiary w-[15%] rounded-full opacity-60"></div>
+<div class="h-2 w-full bg-[#E6D9C7] rounded-full overflow-hidden">
+<div class="h-full bg-[#4C8C4A] w-[15%] rounded-full"></div>
 </div>
 </div>
 <div class="space-y-2">
@@ -276,8 +327,8 @@
 <span class="" style="">其他</span>
 <span class="" style="">13 (10%)</span>
 </div>
-<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-<div class="h-full bg-outline w-[10%] rounded-full"></div>
+<div class="h-2 w-full bg-[#E6D9C7] rounded-full overflow-hidden">
+<div class="h-full bg-[#6D6A66] w-[10%] rounded-full"></div>
 </div>
 </div>
 </div>
@@ -292,11 +343,11 @@
 <svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
 <circle cx="18" cy="18" fill="none" r="16" stroke="rgba(255,255,255,0.05)" stroke-width="3"></circle>
 <!-- High Risk (12/128 = 9.3%) -->
-<circle cx="18" cy="18" fill="none" r="16" stroke="#f97316" stroke-dasharray="9 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#E53935" stroke-dasharray="9 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="3"></circle>
 <!-- Med Risk (38/128 = 29.6%) -->
-<circle cx="18" cy="18" fill="none" r="16" stroke="#ca7bff" stroke-dasharray="30 100" stroke-dashoffset="-9" stroke-linecap="round" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#D8C266" stroke-dasharray="30 100" stroke-dashoffset="-9" stroke-linecap="round" stroke-width="3"></circle>
 <!-- Low Risk (78/128 = 61%) -->
-<circle cx="18" cy="18" fill="none" r="16" stroke="#494847" stroke-dasharray="61 100" stroke-dashoffset="-39" stroke-linecap="round" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#B9DDBB" stroke-dasharray="61 100" stroke-dashoffset="-39" stroke-linecap="round" stroke-width="3"></circle>
 </svg>
 <div class="absolute inset-0 flex flex-col items-center justify-center">
 <span class="text-3xl font-black font-headline" style="">128</span>
@@ -305,19 +356,19 @@
 </div>
 <div class="space-y-4">
 <div class="flex items-center gap-3">
-<span class="w-3 h-3 rounded-full bg-orange-500"></span>
+<span class="w-3 h-3 rounded-full bg-[#E53935]"></span>
+<div>
+<p class="text-xs text-white/60 font-label" style="">高风险 (12)</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-[#D8C266]"></span>
 <div>
 <p class="text-xs text-white/60 font-label" style="">中风险 (38)</p>
 </div>
 </div>
 <div class="flex items-center gap-3">
-<span class="w-3 h-3 rounded-full bg-secondary"></span>
-<div>
-<p class="text-xs text-white/60 font-label" style="">中风险 (38)</p>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<span class="w-3 h-3 rounded-full bg-outline"></span>
+<span class="w-3 h-3 rounded-full bg-[#B9DDBB]"></span>
 <div>
 <p class="text-xs text-white/60 font-label" style="">低风险 (78)</p>
 </div>
@@ -329,7 +380,7 @@
 <!-- Core Insight Section -->
 <section class="mb-12">
 <div class="bg-gradient-to-br from-surface-container-high to-surface-container-low p-[1px] rounded-3xl">
-<div class="bg-black/40 backdrop-blur-2xl p-8 rounded-[23px] relative overflow-hidden">
+<div class="bg-transparent backdrop-blur-2xl p-8 rounded-[23px] relative overflow-hidden">
 <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
 <div class="flex items-center gap-3 mb-6">
 <div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
@@ -346,7 +397,7 @@
 <div class="flex gap-12">
 <div>
 <label class="text-[10px] font-label uppercase tracking-widest text-white/40 block mb-2" style="">风险等级</label>
-<span class="text-2xl font-black font-headline text-orange-500 tracking-tighter" style="">危急</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-2xl font-black font-headline tracking-tighter border" style="color:#FF0000 !important; background:rgba(255,0,0,0.08); border-color:rgba(255,0,0,0.35);">危急</span>
 </div>
 <div>
 <label class="text-[10px] font-label uppercase tracking-widest text-white/40 block mb-2" style="">人工复核需求</label>
@@ -392,4 +443,102 @@
 <!-- Background Decorative Gradients -->
 <div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 <div class="fixed bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-secondary/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+<script>
+    const bellBtn = document.getElementById("notificationBellBtn");
+    const bellBadge = document.getElementById("notificationBellBadge");
+    let reviewPopup = document.getElementById("reviewAlertPopup");
+    let closeReviewBtn = document.getElementById("closeReviewAlertBtn");
+    const pendingReviewCount = Number(localStorage.getItem("pendingHumanReviewCount") || "2");
+
+    if (bellBtn && bellBadge) {
+        if (!reviewPopup) {
+            const popup = document.createElement("div");
+            popup.id = "reviewAlertPopup";
+            popup.className = "hidden fixed top-20 right-8 z-[80] w-80 rounded-2xl border border-primary/30 bg-[#F7F2E8]/95 backdrop-blur-xl p-4 shadow-[0_12px_30px_rgba(0,0,0,0.45)]";
+            popup.innerHTML =
+                '<div class="flex items-start gap-3">' +
+                '<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: \'FILL\' 1;">notification_important</span>' +
+                '<div class="flex-1">' +
+                '<p class="text-sm font-bold text-[#352E2A]">人工复核提醒</p>' +
+                '<p class="text-xs text-[#6B625B] mt-1" id="reviewAlertText"></p>' +
+                '<div class="mt-3 flex items-center gap-2">' +
+                '<a class="px-3 py-1.5 rounded-lg bg-primary/20 text-primary text-xs font-bold hover:bg-primary/30 transition-all" href="../人工复核/code.html">去处理</a>' +
+                '<button class="px-3 py-1.5 rounded-lg bg-[#EFE4D2] text-[#6B625B] text-xs hover:bg-[#E7D8C1] transition-all" id="closeReviewAlertBtn">稍后</button>' +
+                "</div></div></div>";
+            document.body.appendChild(popup);
+            reviewPopup = popup;
+            closeReviewBtn = popup.querySelector("#closeReviewAlertBtn");
+        }
+
+        if (pendingReviewCount > 0) {
+            bellBadge.textContent = pendingReviewCount > 99 ? "99+" : String(pendingReviewCount);
+            bellBadge.classList.remove("hidden");
+            const reviewAlertText = document.getElementById("reviewAlertText");
+            if (reviewAlertText) {
+                reviewAlertText.textContent = "当前有 " + pendingReviewCount + " 条问题需要人工复核";
+            }
+        }
+
+        bellBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (reviewPopup) {
+                reviewPopup.classList.toggle("hidden");
+            }
+        });
+
+        document.addEventListener("click", function (e) {
+            if (reviewPopup && !reviewPopup.contains(e.target) && !bellBtn.contains(e.target)) {
+                reviewPopup.classList.add("hidden");
+            }
+        });
+
+        if (closeReviewBtn) {
+            closeReviewBtn.addEventListener("click", function () {
+                reviewPopup.classList.add("hidden");
+            });
+        }
+    }
+
+  const userAvatarNav = document.getElementById("user-avatar-nav");
+  const userAvatarMenu = document.getElementById("userAvatarMenu");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  if (userAvatarNav && userAvatarMenu) {
+    userAvatarNav.addEventListener("click", function (e) {
+      e.stopPropagation();
+      userAvatarMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", function () {
+      userAvatarMenu.classList.add("hidden");
+    });
+  }
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+      localStorage.clear();
+      window.location.href = "../登录/code.html";
+    });
+  }
+</script>
 </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
-<html class="dark" lang="zh-CN">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -14,53 +14,53 @@
             theme: {
                 extend: {
                     colors: {
-                        "background": "#0e0e0e",
+                        "background": "#EBDEC6",
                         "error": "#ff6e84",
                         "outline-variant": "#494847",
-                        "surface-container": "#1a1919",
+                        "surface-container": "#F7F2E8",
                         "error-container": "#a70138",
                         "on-primary-fixed-variant": "#6f1076",
                         "on-tertiary": "#54006e",
-                        "on-surface-variant": "#adaaaa",
+                        "on-surface-variant": "#352E2A",
                         "primary-container": "#df7be0",
-                        "secondary-dim": "#ca7bff",
+                        "secondary-dim": "#B07A47",
                         "on-tertiary-fixed": "#2d003d",
-                        "secondary-container": "#7b0fb9",
-                        "primary-dim": "#eb86ec",
-                        "primary-fixed-dim": "#eb86ec",
+                        "secondary-container": "#8c623a",
+                        "primary-dim": "#7A4E26",
+                        "primary-fixed-dim": "#7A4E26",
                         "secondary-fixed": "#eac4ff",
-                        "primary-fixed": "#fa93fa",
+                        "primary-fixed": "#8A5A2B",
                         "error-dim": "#d73357",
                         "on-error-container": "#ffb2b9",
-                        "surface-dim": "#0e0e0e",
-                        "tertiary": "#e68fff",
+                        "surface-dim": "#f3f4f6",
+                        "tertiary": "#C58B52",
                         "on-secondary": "#360056",
                         "on-secondary-container": "#f2d5ff",
                         "on-secondary-fixed": "#530081",
-                        "inverse-primary": "#943899",
-                        "tertiary-container": "#de7afd",
+                        "inverse-primary": "#8A5A2B",
+                        "tertiary-container": "#B9824A",
                         "inverse-on-surface": "#565554",
-                        "surface-variant": "#262625",
+                        "surface-variant": "#e5e7eb",
                         "on-tertiary-container": "#420057",
-                        "surface-container-highest": "#262625",
-                        "primary": "#fa93fa",
-                        "tertiary-fixed": "#e68fff",
+                        "surface-container-highest": "#E7D8C1",
+                        "primary": "#8A5A2B",
+                        "tertiary-fixed": "#C58B52",
                         "secondary-fixed-dim": "#e2b1ff",
-                        "surface-tint": "#fa93fa",
+                        "surface-tint": "#8A5A2B",
                         "outline": "#777575",
-                        "surface-container-high": "#201f1f",
-                        "surface": "#0e0e0e",
+                        "surface-container-high": "#EFE4D2",
+                        "surface": "#ffffff",
                         "on-tertiary-fixed-variant": "#62007f",
-                        "tertiary-dim": "#d875f7",
-                        "surface-bright": "#2d2c2c",
+                        "tertiary-dim": "#AE7440",
+                        "surface-bright": "#ffffff",
                         "on-primary-fixed": "#3f0044",
                         "on-secondary-fixed-variant": "#7b10b9",
-                        "on-surface": "#ffffff",
-                        "secondary": "#ca7bff",
-                        "tertiary-fixed-dim": "#de7afd",
-                        "on-background": "#ffffff",
-                        "surface-container-lowest": "#000000",
-                        "surface-container-low": "#141313",
+                        "on-surface": "#352E2A",
+                        "secondary": "#B07A47",
+                        "tertiary-fixed-dim": "#B9824A",
+                        "on-background": "#352E2A",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#F3EBDD",
                         "on-primary-container": "#430048",
                         "inverse-surface": "#fcf8f8",
                         "on-primary": "#64006c",
@@ -82,47 +82,106 @@
             vertical-align: middle;
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
+            background: #F7F2E8;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
         .primary-gradient-bg {
-            background: linear-gradient(135deg, #FA93FA 0%, #C967E8 50%, #983AD6 100%);
+            background: linear-gradient(135deg, #8A5A2B 0%, #A8733A 50%, #6B4422 100%);
         }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #0e0e0e; }
         ::-webkit-scrollbar-thumb { background: #262625; border-radius: 10px; }
-    </style>
+            .glass-card,
+        .glass-panel,
+        .obsidian-card,
+        .bg-surface-container,
+        .bg-surface-container-high,
+        .bg-surface-container-highest,
+        .bg-surface-container-low {
+            color: #352E2A;
+        }
+        .glass-card .text-white,
+        .glass-panel .text-white,
+        .obsidian-card .text-white,
+        .bg-surface-container .text-white,
+        .bg-surface-container-high .text-white,
+        .bg-surface-container-highest .text-white,
+        .bg-surface-container-low .text-white,
+        .glass-card .text-white\/90,
+        .glass-panel .text-white\/90,
+        .obsidian-card .text-white\/90,
+        .glass-card .text-white\/80,
+        .glass-panel .text-white\/80,
+        .obsidian-card .text-white\/80,
+        .glass-card .text-white\/70,
+        .glass-panel .text-white\/70,
+        .obsidian-card .text-white\/70,
+        .glass-card .text-white\/60,
+        .glass-panel .text-white\/60,
+        .obsidian-card .text-white\/60,
+        .glass-card .text-white\/50,
+        .glass-panel .text-white\/50,
+        .obsidian-card .text-white\/50,
+        .glass-card .text-white\/40,
+        .glass-panel .text-white\/40,
+        .obsidian-card .text-white\/40,
+        .glass-card .text-white\/30,
+        .glass-panel .text-white\/30,
+        .obsidian-card .text-white\/30 {
+            color: #6B625B !important;
+        }            :root {
+            --unified-text-color: #352E2A;
+        }
+        body,
+        h1, h2, h3, h4, h5, h6,
+        p, span, a, button, label,
+        li, td, th,
+        input, textarea, select {
+            color: var(--unified-text-color) !important;
+        }    </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-primary/30">
 <!-- Side Navigation -->
-<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#0e0e0e] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#B57743] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
 <div class="py-8 px-6">
 <h1 class="font-headline font-black text-white text-xl tracking-tight">智能日志分析系统</h1>
 <p class="font-label text-[10px] uppercase tracking-widest text-white/40 mt-1">Luminous Obsidian AI</p>
 </div>
 <nav class="flex flex-col px-4 space-y-2 mt-4">
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../工作台/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../工作台/code.html">
 <span class="material-symbols-outlined">dashboard</span>
 <span class="font-label text-sm uppercase tracking-widest">工作台</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../日志上传/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../日志上传/code.html">
 <span class="material-symbols-outlined">analytics</span>
 <span class="font-label text-sm uppercase tracking-widest">日志分析</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white/10 text-white border-r-4 border-[#C967E8] backdrop-blur-md transition-all duration-300" href="../问题中心/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] border-r-4 border-[#A8733A] backdrop-blur-md transition-all duration-300" href="../问题中心/code.html">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">biotech</span>
 <span class="font-label text-sm uppercase tracking-widest">问题处理</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../历史日志存档/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../历史日志存档/code.html">
 <span class="material-symbols-outlined">history_edu</span>
 <span class="font-label text-sm uppercase tracking-widest">历史与知识</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../规则配置管理/code.html">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../规则配置管理/code.html">
 <span class="material-symbols-outlined">settings_suggest</span>
 <span class="font-label text-sm uppercase tracking-widest">系统管理</span>
 </a>
 </nav>
+<div class="mt-auto px-6 py-8">
+<div class="flex flex-col space-y-3">
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+<span>帮助中心</span>
+</a>
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#">
+<span class="material-symbols-outlined text-sm">description</span>
+<span>技术文档</span>
+</a>
+</div>
+</div>
 </aside>
 <!-- Top Navigation -->
 <header class="fixed top-0 right-0 left-0 md:left-64 h-16 bg-white/5 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-8 z-50">
@@ -140,12 +199,16 @@
 <button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors">
 <span class="material-symbols-outlined">widgets</span>
 </button>
-<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative">
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative" id="notificationBellBtn">
 <span class="material-symbols-outlined">notifications</span>
-<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+<span class="hidden absolute -top-0.5 -right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-error text-[10px] leading-4 text-white text-center" id="notificationBellBadge"></span>
 </button>
-<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30 cursor-pointer">
-<img alt="用户头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+<div class="w-8 h-8 rounded-full border border-primary/30 cursor-pointer relative" id="user-avatar-nav">
+<img alt="用户头像" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+<div class="absolute top-full right-0 mt-2 w-48 rounded-xl bg-[#F7F2E8]/95 backdrop-blur-xl border border-[#D8C7AE] shadow-xl z-50" id="userAvatarMenu" style="display: none;">
+<a href="../个人页面/code.html" class="block px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors rounded-t-xl">个人页面</a>
+<button id="logoutBtn" class="w-full text-left px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors last:rounded-b-xl">退出登录</button>
+</div>
 </div>
 </div>
 </div>
@@ -258,7 +321,7 @@
 </td>
 <td class="px-6 py-5 text-sm text-primary/80 italic">扩容数据库连接池至 200</td>
 <td class="px-6 py-5 text-right">
-<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="flex justify-end gap-2">
 <a class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-white/5 hover:bg-white/10 text-white transition-all" href="../人工复核/code.html">详情</a>
 <a class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-primary/20 hover:bg-primary/40 text-primary transition-all" href="../人工复核/code.html">立即处理</a>
 </div>
@@ -287,7 +350,7 @@
 </td>
 <td class="px-6 py-5 text-sm text-primary/80 italic">检查网络路由及节点存活状态</td>
 <td class="px-6 py-5 text-right">
-<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="flex justify-end gap-2">
 <a class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-white/5 hover:bg-white/10 text-white transition-all" href="../人工复核/code.html">详情</a>
 <a class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-primary/20 hover:bg-primary/40 text-primary transition-all" href="../人工复核/code.html">立即处理</a>
 </div>
@@ -316,7 +379,7 @@
 </td>
 <td class="px-6 py-5 text-sm text-primary/80 italic">优化查询语句，增加索引 idx_user_id</td>
 <td class="px-6 py-5 text-right">
-<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="flex justify-end gap-2">
 <a class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-white/5 hover:bg-white/10 text-white transition-all" href="../人工复核/code.html">详情</a>
 <button class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-white/10 text-white/40 cursor-not-allowed">已处理</button>
 </div>
@@ -345,7 +408,7 @@
 </td>
 <td class="px-6 py-5 text-sm text-primary/80 italic">分析堆栈快照，增加 JVM 堆内存</td>
 <td class="px-6 py-5 text-right">
-<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="flex justify-end gap-2">
 <a class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-white/5 hover:bg-white/10 text-white transition-all" href="../人工复核/code.html">详情</a>
 <a class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-primary/20 hover:bg-primary/40 text-primary transition-all" href="../人工复核/code.html">立即处理</a>
 </div>
@@ -402,6 +465,106 @@
 </section>
 </main>
 <!-- Global Gradient Glows -->
-<div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#FA93FA]/5 blur-[120px] pointer-events-none -z-10"></div>
-<div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#983AD6]/5 blur-[120px] pointer-events-none -z-10"></div>
+<div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#8A5A2B]/5 blur-[120px] pointer-events-none -z-10"></div>
+<div class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#6B4422]/5 blur-[120px] pointer-events-none -z-10"></div>
+
+<script>
+    const bellBtn = document.getElementById("notificationBellBtn");
+    const bellBadge = document.getElementById("notificationBellBadge");
+    let reviewPopup = document.getElementById("reviewAlertPopup");
+    let closeReviewBtn = document.getElementById("closeReviewAlertBtn");
+    const pendingReviewCount = Number(localStorage.getItem("pendingHumanReviewCount") || "2");
+
+    if (bellBtn && bellBadge) {
+        if (!reviewPopup) {
+            const popup = document.createElement("div");
+            popup.id = "reviewAlertPopup";
+            popup.className = "hidden fixed top-20 right-8 z-[80] w-80 rounded-2xl border border-primary/30 bg-[#F7F2E8]/95 backdrop-blur-xl p-4 shadow-[0_12px_30px_rgba(0,0,0,0.45)]";
+            popup.innerHTML =
+                '<div class="flex items-start gap-3">' +
+                '<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: \'FILL\' 1;">notification_important</span>' +
+                '<div class="flex-1">' +
+                '<p class="text-sm font-bold text-[#352E2A]">人工复核提醒</p>' +
+                '<p class="text-xs text-[#6B625B] mt-1" id="reviewAlertText"></p>' +
+                '<div class="mt-3 flex items-center gap-2">' +
+                '<a class="px-3 py-1.5 rounded-lg bg-primary/20 text-primary text-xs font-bold hover:bg-primary/30 transition-all" href="../人工复核/code.html">去处理</a>' +
+                '<button class="px-3 py-1.5 rounded-lg bg-[#EFE4D2] text-[#6B625B] text-xs hover:bg-[#E7D8C1] transition-all" id="closeReviewAlertBtn">稍后</button>' +
+                "</div></div></div>";
+            document.body.appendChild(popup);
+            reviewPopup = popup;
+            closeReviewBtn = popup.querySelector("#closeReviewAlertBtn");
+        }
+
+        if (pendingReviewCount > 0) {
+            bellBadge.textContent = pendingReviewCount > 99 ? "99+" : String(pendingReviewCount);
+            bellBadge.classList.remove("hidden");
+            const reviewAlertText = document.getElementById("reviewAlertText");
+            if (reviewAlertText) {
+                reviewAlertText.textContent = "当前有 " + pendingReviewCount + " 条问题需要人工复核";
+            }
+        }
+
+        bellBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (reviewPopup) {
+                reviewPopup.classList.toggle("hidden");
+            }
+        });
+
+        document.addEventListener("click", function (e) {
+            if (reviewPopup && !reviewPopup.contains(e.target) && !bellBtn.contains(e.target)) {
+                reviewPopup.classList.add("hidden");
+            }
+        });
+
+        if (closeReviewBtn) {
+            closeReviewBtn.addEventListener("click", function () {
+                reviewPopup.classList.add("hidden");
+            });
+        }
+    }
+
+  const userAvatarNav = document.getElementById("user-avatar-nav");
+    const userAvatarMenu = document.getElementById("userAvatarMenu");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (userAvatarNav && userAvatarMenu) {
+        userAvatarNav.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = userAvatarMenu.style.display === "block";
+            userAvatarMenu.style.display = isOpen ? "none" : "block";
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!userAvatarNav.contains(e.target) && !userAvatarMenu.contains(e.target)) {
+                userAvatarMenu.style.display = "none";
+            }
+        });
+
+        userAvatarMenu.addEventListener("click", function (e) {
+            e.stopPropagation();
+        });
+    }
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function () {
+            localStorage.clear();
+            window.location.href = "../登录/code.html";
+        });
+  }
+</script>
 </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

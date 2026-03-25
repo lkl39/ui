@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
-<html class="dark" lang="zh-CN"><head>
+<html lang="zh-CN"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>首页工作台 - 智能日志分析系统</title>
@@ -13,57 +13,57 @@
             theme: {
                 extend: {
                     colors: {
-                        "tertiary-dim": "#d875f7",
-                        "on-surface": "#ffffff",
+                        "tertiary-dim": "#AE7440",
+                        "on-surface": "#352E2A",
                         "on-primary-fixed": "#3f0044",
                         "error-container": "#a70138",
-                        "surface-container-high": "#201f1f",
-                        "primary-fixed": "#fa93fa",
+                        "surface-container-high": "#EFE4D2",
+                        "primary-fixed": "#8A5A2B",
                         "on-secondary-container": "#f2d5ff",
-                        "tertiary-container": "#de7afd",
+                        "tertiary-container": "#B9824A",
                         "on-secondary-fixed": "#530081",
-                        "surface-container-lowest": "#000000",
-                        "secondary": "#ca7bff",
-                        "secondary-dim": "#ca7bff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#B07A47",
+                        "secondary-dim": "#B07A47",
                         "on-error": "#490013",
                         "error": "#ff6e84",
-                        "surface-bright": "#2d2c2c",
+                        "surface-bright": "#ffffff",
                         "on-error-container": "#ffb2b9",
                         "inverse-on-surface": "#565554",
-                        "secondary-container": "#7b0fb9",
-                        "primary-dim": "#eb86ec",
-                        "background": "#0e0e0e",
+                        "secondary-container": "#8c623a",
+                        "primary-dim": "#7A4E26",
+                        "background": "#EBDEC6",
                         "inverse-surface": "#fcf8f8",
-                        "on-background": "#ffffff",
-                        "surface-tint": "#fa93fa",
+                        "on-background": "#352E2A",
+                        "surface-tint": "#8A5A2B",
                         "secondary-fixed-dim": "#e2b1ff",
-                        "surface-container-low": "#141313",
+                        "surface-container-low": "#F3EBDD",
                         "on-tertiary": "#54006e",
-                        "surface-container": "#1a1919",
+                        "surface-container": "#F7F2E8",
                         "on-primary": "#64006c",
-                        "tertiary-fixed": "#e68fff",
+                        "tertiary-fixed": "#C58B52",
                         "on-tertiary-fixed": "#2d003d",
-                        "primary": "#fa93fa",
+                        "primary": "#8A5A2B",
                         "on-primary-container": "#430048",
                         "on-tertiary-fixed-variant": "#62007f",
                         "outline-variant": "#494847",
                         "error-dim": "#d73357",
-                        "surface": "#0e0e0e",
-                        "primary-fixed-dim": "#eb86ec",
+                        "surface": "#ffffff",
+                        "primary-fixed-dim": "#7A4E26",
                         "on-secondary-fixed-variant": "#7b10b9",
-                        "surface-dim": "#0e0e0e",
-                        "tertiary-fixed-dim": "#de7afd",
+                        "surface-dim": "#f3f4f6",
+                        "tertiary-fixed-dim": "#B9824A",
                         "outline": "#777575",
                         "on-primary-fixed-variant": "#6f1076",
-                        "tertiary": "#e68fff",
+                        "tertiary": "#C58B52",
                         "secondary-fixed": "#eac4ff",
-                        "on-surface-variant": "#adaaaa",
+                        "on-surface-variant": "#352E2A",
                         "on-secondary": "#360056",
-                        "inverse-primary": "#943899",
+                        "inverse-primary": "#8A5A2B",
                         "primary-container": "#df7be0",
-                        "surface-variant": "#262625",
+                        "surface-variant": "#e5e7eb",
                         "on-tertiary-container": "#420057",
-                        "surface-container-highest": "#262625"
+                        "surface-container-highest": "#E7D8C1"
                     },
                     fontFamily: {
                         "headline": ["Manrope"],
@@ -77,13 +77,13 @@
     </script>
 <style>
         .glass-panel {
-            background: rgba(255, 255, 255, 0.05);
+            background: #F7F2E8;
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .primary-gradient-text {
-            background: linear-gradient(to right, #FA93FA, #C967E8, #983AD6);
+            background: linear-gradient(to right, #8A5A2B, #A8733A, #6B4422);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -94,48 +94,95 @@
             box-shadow: 0 0 30px -5px rgba(255, 110, 132, 0.3);
         }
         body {
-            background-color: #010101;
-            color: #ffffff;
+            background-color: #EBDEC6;
+            color: #0f172a;
         }
-    </style>
+            .glass-card,
+        .glass-panel,
+        .obsidian-card,
+        .bg-surface-container,
+        .bg-surface-container-high,
+        .bg-surface-container-highest,
+        .bg-surface-container-low {
+            color: #352E2A;
+        }
+        .glass-card .text-white,
+        .glass-panel .text-white,
+        .obsidian-card .text-white,
+        .bg-surface-container .text-white,
+        .bg-surface-container-high .text-white,
+        .bg-surface-container-highest .text-white,
+        .bg-surface-container-low .text-white,
+        .glass-card .text-white\/90,
+        .glass-panel .text-white\/90,
+        .obsidian-card .text-white\/90,
+        .glass-card .text-white\/80,
+        .glass-panel .text-white\/80,
+        .obsidian-card .text-white\/80,
+        .glass-card .text-white\/70,
+        .glass-panel .text-white\/70,
+        .obsidian-card .text-white\/70,
+        .glass-card .text-white\/60,
+        .glass-panel .text-white\/60,
+        .obsidian-card .text-white\/60,
+        .glass-card .text-white\/50,
+        .glass-panel .text-white\/50,
+        .obsidian-card .text-white\/50,
+        .glass-card .text-white\/40,
+        .glass-panel .text-white\/40,
+        .obsidian-card .text-white\/40,
+        .glass-card .text-white\/30,
+        .glass-panel .text-white\/30,
+        .obsidian-card .text-white\/30 {
+            color: #6B625B !important;
+        }            :root {
+            --unified-text-color: #352E2A;
+        }
+        body,
+        h1, h2, h3, h4, h5, h6,
+        p, span, a, button, label,
+        li, td, th,
+        input, textarea, select {
+            color: var(--unified-text-color) !important;
+        }    </style>
 </head>
 <body class="font-body selection:bg-primary/30">
 <!-- Side Navigation -->
-<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#0e0e0e] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#B57743] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
 <div class="py-8 px-6">
 <h1 class="font-headline font-black text-white text-xl tracking-tight" style="">智能日志分析系统</h1>
 <p class="font-label text-[10px] uppercase tracking-widest text-white/40 mt-1" style="">Luminous Obsidian AI</p>
 </div>
 <nav class="flex flex-col px-4 space-y-2 mt-4">
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white/10 text-white border-r-4 border-[#C967E8] backdrop-blur-md transition-all duration-300" href="../工作台/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] border-r-4 border-[#A8733A] backdrop-blur-md transition-all duration-300" href="../工作台/code.html" style="">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>dashboard</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">工作台</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../日志上传/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../日志上传/code.html" style="">
 <span class="material-symbols-outlined" style="">analytics</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">日志分析</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../问题中心/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../问题中心/code.html" style="">
 <span class="material-symbols-outlined" style="">biotech</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">问题处理</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../历史日志存档/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../历史日志存档/code.html" style="">
 <span class="material-symbols-outlined" style="">history_edu</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">历史与知识</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../规则配置管理/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../规则配置管理/code.html" style="">
 <span class="material-symbols-outlined" style="">settings_suggest</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">系统管理</span>
 </a>
 </nav>
 <div class="mt-auto px-6 py-8">
-<button class="w-full py-3 rounded-xl bg-gradient-to-r from-[#FA93FA] via-[#C967E8] to-[#983AD6] text-on-primary font-bold text-sm shadow-lg active:scale-95 transition-transform" style="">开始新分析</button>
+<button class="w-full py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] font-bold text-sm shadow-lg hover:bg-[#EFE4D2] active:scale-95 transition-transform" style="">开始新分析</button>
 <div class="mt-6 flex flex-col space-y-3">
-<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#" style="">
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#" style="">
 <span class="material-symbols-outlined text-sm" style="">help</span>
 <span class="" style="">帮助中心</span>
 </a>
-<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#" style="">
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#" style="">
 <span class="material-symbols-outlined text-sm" style="">description</span>
 <span class="" style="">技术文档</span>
 </a>
@@ -158,12 +205,16 @@
 <button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors" style="">
 <span class="material-symbols-outlined" style="">widgets</span>
 </button>
-<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative" style="">
-<span class="material-symbols-outlined" style="">notifications</span>
-<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative" id="notificationBellBtn" style="">
+<span class="material-symbols-outlined">notifications</span>
+<span class="hidden absolute -top-0.5 -right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-error text-[10px] leading-4 text-white text-center" id="notificationBellBadge"></span>
 </button>
-<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30 cursor-pointer">
-<img alt="用户头像" class="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA" style=""/>
+<div class="w-8 h-8 rounded-full border border-primary/30 cursor-pointer relative" id="user-avatar-nav">
+<img alt="用户头像" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+<div class="hidden absolute top-full right-0 mt-2 w-48 rounded-xl bg-[#F7F2E8]/95 backdrop-blur-xl border border-[#D8C7AE] shadow-xl z-50" id="userAvatarMenu">
+<a href="../个人页面/code.html" class="block px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors border-b border-[#E2D5C2]/80 first:rounded-t-xl">个人页面</a>
+<button id="logoutBtn" class="w-full text-left px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors last:rounded-b-xl">退出登录</button>
+</div>
 </div>
 </div>
 </div>
@@ -198,15 +249,15 @@
                     下降 4.2% 已优化
                 </p>
 </div>
-<div class="glass-panel p-6 rounded-2xl border-orange-500/20 bg-orange-500/5 group hover:bg-orange-500/10 transition-all cursor-default shadow-[0_0_30px_-5px_rgba(249,115,22,0.3)]">
+<div class="p-6 rounded-2xl border border-[#D8B08C] bg-[#FCEBDD] group hover:bg-[#F8E1CF] transition-all cursor-default shadow-[0_8px_24px_-8px_rgba(181,119,67,0.35)]">
 <div class="flex justify-between items-start mb-4">
-<div class="p-2 rounded-lg bg-orange-500/20 text-orange-400">
+<div class="p-2 rounded-lg bg-[#E9BE98] text-[#8A4D24]">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">warning</span>
 </div>
-<span class="text-xs font-label text-orange-500/50 tracking-widest uppercase">高风险问题</span>
+<span class="text-xs font-label text-[#8A4D24]/80 tracking-widest uppercase">高风险问题</span>
 </div>
-<h3 class="text-3xl font-headline font-extrabold text-orange-400 mb-1">42</h3>
-<p class="text-xs text-orange-400/70 font-medium">需要立即处理</p>
+<h3 class="text-3xl font-headline font-extrabold text-[#7A3518] mb-1">42</h3>
+<p class="text-xs text-[#8A4D24] font-medium">需要立即处理</p>
 </div>
 <div class="glass-panel p-6 rounded-2xl group hover:bg-white/10 transition-all cursor-default">
 <div class="flex justify-between items-start mb-4">
@@ -225,33 +276,54 @@
 <h4 class="text-lg font-headline font-bold">近 7 天问题趋势折线图</h4>
 <div class="flex space-x-4">
 <div class="flex items-center space-x-2">
-<span class="w-3 h-3 rounded-full bg-[#FF00FF]"></span>
-<span class="text-xs text-white/60 font-label uppercase">总计</span>
+<span class="w-3 h-3 rounded-full bg-[#8A5A2B]"></span>
+<span class="text-xs text-[#6B625B] font-label uppercase">总计</span>
 </div>
 <div class="flex items-center space-x-2">
-<span class="w-3 h-3 rounded-full bg-[#FF8C00]"></span>
-<span class="text-xs text-white/60 font-label uppercase">高风险</span>
+<span class="w-3 h-3 rounded-full bg-[#E53935]"></span>
+<span class="text-xs text-[#6B625B] font-label uppercase">高风险</span>
 </div>
 </div>
 </div>
-<div class="flex-grow flex items-end space-x-4 relative">
+<div class="flex-grow flex items-end space-x-4 relative" id="trendChartContainer">
 <!-- Vibrant Line Chart Visuals -->
 <div class="absolute inset-0 flex items-center justify-center opacity-60 pointer-events-none">
-<svg class="w-full h-full stroke-[#FF00FF] stroke-[3] fill-none drop-shadow-[0_0_8px_rgba(255,0,255,0.5)]" viewbox="0 0 800 200">
-<path d="M0,150 Q100,120 200,160 T400,100 T600,130 T800,40"></path>
+<svg class="w-full h-full drop-shadow-[0_0_6px_rgba(138,90,43,0.18)]" viewbox="0 0 800 200">
+<defs>
+<linearGradient id="totalAreaGradient" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#8A5A2B" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#8A5A2B" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<path d="M0,150 Q100,120 200,160 T400,100 T600,130 T800,40 L800,200 L0,200 Z" fill="url(#totalAreaGradient)"></path>
+<path d="M0,150 Q100,120 200,160 T400,100 T600,130 T800,40" stroke="#8A5A2B" stroke-width="3" fill="none"></path>
 </svg>
-<svg class="w-full h-full stroke-[#FF8C00] stroke-[3] fill-none absolute inset-0 drop-shadow-[0_0_8px_rgba(255,140,0,0.5)]" viewbox="0 0 800 200">
-<path d="M0,180 Q100,170 200,185 T400,160 T600,175 T800,150"></path>
+<svg class="w-full h-full absolute inset-0 drop-shadow-[0_0_5px_rgba(229,57,53,0.2)]" viewbox="0 0 800 200">
+<defs>
+<linearGradient id="riskAreaGradient" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#E53935" stop-opacity="0.16"></stop>
+<stop offset="100%" stop-color="#E53935" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<path d="M0,180 Q100,170 200,185 T400,160 T600,175 T800,150 L800,200 L0,200 Z" fill="url(#riskAreaGradient)"></path>
+<path d="M0,180 Q100,170 200,185 T400,160 T600,175 T800,150" stroke="#E53935" stroke-width="2.5" fill="none"></path>
 </svg>
 </div>
+<div class="absolute inset-0 z-10" id="trendChartHitArea"></div>
+<div class="absolute top-0 bottom-6 w-px bg-[#BCA890]/60 hidden pointer-events-none z-20" id="trendChartGuide"></div>
+<div class="hidden absolute z-30 px-3 py-2 rounded-lg border border-[#D8C7AE] bg-[#F7F2E8]/95 shadow-[0_8px_20px_rgba(53,46,42,0.12)] text-xs pointer-events-none" id="trendChartTooltip">
+<p class="font-bold" id="trendTooltipDay">周一</p>
+<p id="trendTooltipTotal">总计: 0</p>
+<p id="trendTooltipRisk">高风险: 0</p>
+</div>
 <div class="w-full flex justify-between px-2 pt-4 border-t border-white/5 mt-auto">
-<span class="text-[10px] text-white/30 font-label">周一</span>
-<span class="text-[10px] text-white/30 font-label">周二</span>
-<span class="text-[10px] text-white/30 font-label">周三</span>
-<span class="text-[10px] text-white/30 font-label">周四</span>
-<span class="text-[10px] text-white/30 font-label">周五</span>
-<span class="text-[10px] text-white/30 font-label">周六</span>
-<span class="text-[10px] text-white/30 font-label">周日</span>
+<span class="text-[10px] text-[#8A8178] font-label">周一</span>
+<span class="text-[10px] text-[#8A8178] font-label">周二</span>
+<span class="text-[10px] text-[#8A8178] font-label">周三</span>
+<span class="text-[10px] text-[#8A8178] font-label">周四</span>
+<span class="text-[10px] text-[#8A8178] font-label">周五</span>
+<span class="text-[10px] text-[#8A8178] font-label">周六</span>
+<span class="text-[10px] text-[#8A8178] font-label">周日</span>
 </div>
 </div></div>
 <div class="glass-panel p-8 rounded-2xl h-[400px] flex flex-col">
@@ -262,8 +334,8 @@
 <span class="" style="">数据库异常</span>
 <span class="" style="">42%</span>
 </div>
-<div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-<div class="h-full bg-primary w-[42%]"></div>
+<div class="h-1.5 w-full bg-[#E6D9C7] rounded-full overflow-hidden">
+<div class="h-full bg-[#7B5EA7] w-[42%]"></div>
 </div>
 </div>
 <div>
@@ -271,8 +343,8 @@
 <span class="" style="">网络异常</span>
 <span class="" style="">28%</span>
 </div>
-<div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-<div class="h-full bg-secondary w-[28%]"></div>
+<div class="h-1.5 w-full bg-[#E6D9C7] rounded-full overflow-hidden">
+<div class="h-full bg-[#2F7A8C] w-[28%]"></div>
 </div>
 </div>
 <div>
@@ -280,8 +352,8 @@
 <span class="" style="">权限异常</span>
 <span class="" style="">15%</span>
 </div>
-<div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-<div class="h-full bg-tertiary-container w-[15%]"></div>
+<div class="h-1.5 w-full bg-[#E6D9C7] rounded-full overflow-hidden">
+<div class="h-full bg-[#4C8C4A] w-[15%]"></div>
 </div>
 </div>
 <div>
@@ -289,8 +361,8 @@
 <span class="" style="">配置异常</span>
 <span class="" style="">10%</span>
 </div>
-<div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-<div class="h-full bg-white/40 w-[10%]"></div>
+<div class="h-1.5 w-full bg-[#E6D9C7] rounded-full overflow-hidden">
+<div class="h-full bg-[#C2873C] w-[10%]"></div>
 </div>
 </div>
 <div>
@@ -298,8 +370,8 @@
 <span class="" style="">服务异常</span>
 <span class="" style="">5%</span>
 </div>
-<div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-<div class="h-full bg-error-dim w-[5%]"></div>
+<div class="h-1.5 w-full bg-[#E6D9C7] rounded-full overflow-hidden">
+<div class="h-full bg-[#C94F4F] w-[5%]"></div>
 </div>
 </div>
 </div>
@@ -308,14 +380,14 @@
 <!-- Lists Row -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 <!-- Recent Analysis -->
-<div class="glass-panel rounded-2xl overflow-hidden flex flex-col">
-<div class="px-8 py-6 border-b border-white/5 flex justify-between items-center">
+<div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-[#D8C7AE] shadow-[0_6px_18px_rgba(53,46,42,0.08)]">
+<div class="px-8 py-6 border-b border-[#D8C7AE] flex justify-between items-center">
 <h4 class="text-lg font-headline font-bold" style="">最近分析结果</h4>
 <button class="text-primary text-xs font-label uppercase hover:underline" style="">查看全部</button>
 </div>
 <div class="flex-grow">
 <table class="w-full">
-<tbody class="divide-y divide-white/5">
+<tbody class="divide-y divide-[#E2D5C2]">
 <tr class="hover:bg-white/5 transition-colors group">
 <td class="px-8 py-4" style="">
 <div class="flex flex-col">
@@ -369,8 +441,8 @@
 </div>
 </div>
 <!-- To-Do List -->
-<div class="glass-panel rounded-2xl flex flex-col">
-<div class="px-8 py-6 border-b border-white/5 flex justify-between items-center">
+<div class="glass-panel rounded-2xl flex flex-col border border-[#D8C7AE] shadow-[0_6px_18px_rgba(53,46,42,0.08)]">
+<div class="px-8 py-6 border-b border-[#D8C7AE] flex justify-between items-center">
 <h4 class="text-lg font-headline font-bold" style="">待处理事项</h4>
 <span class="bg-primary/20 text-primary px-2 py-0.5 rounded text-[10px] font-bold" style="">5 条待办</span>
 </div>
@@ -393,7 +465,7 @@
 <span class="material-symbols-outlined text-yellow-400 opacity-50 group-hover:opacity-100">visibility</span>
 </div>
 </div>
-<div class="p-4 rounded-xl bg-white/5 border-l-4 border-white/20 hover:bg-white/10 transition-colors cursor-pointer group">
+<div class="p-4 rounded-xl bg-white/5 border-l-4 border-emerald-500 hover:bg-white/10 transition-colors cursor-pointer group">
 <div class="flex items-start justify-between">
 <div class="flex-grow">
 <h5 class="text-sm font-bold text-white mb-1" style="">生成本周分析报告</h5>
@@ -407,4 +479,145 @@
 </div>
 </main>
 <!-- FAB -->
+<script>
+    const bellBtn = document.getElementById("notificationBellBtn");
+    const bellBadge = document.getElementById("notificationBellBadge");
+    let reviewPopup = document.getElementById("reviewAlertPopup");
+    let closeReviewBtn = document.getElementById("closeReviewAlertBtn");
+    const pendingReviewCount = Number(localStorage.getItem("pendingHumanReviewCount") || "2");
+
+    if (bellBtn && bellBadge) {
+        if (!reviewPopup) {
+            const popup = document.createElement("div");
+            popup.id = "reviewAlertPopup";
+            popup.className = "hidden fixed top-20 right-8 z-[80] w-80 rounded-2xl border border-primary/30 bg-[#F7F2E8]/95 backdrop-blur-xl p-4 shadow-[0_12px_30px_rgba(0,0,0,0.45)]";
+            popup.innerHTML =
+                '<div class="flex items-start gap-3">' +
+                '<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: \'FILL\' 1;">notification_important</span>' +
+                '<div class="flex-1">' +
+                '<p class="text-sm font-bold text-[#352E2A]">人工复核提醒</p>' +
+                '<p class="text-xs text-[#6B625B] mt-1" id="reviewAlertText"></p>' +
+                '<div class="mt-3 flex items-center gap-2">' +
+                '<a class="px-3 py-1.5 rounded-lg bg-primary/20 text-primary text-xs font-bold hover:bg-primary/30 transition-all" href="../人工复核/code.html">去处理</a>' +
+                '<button class="px-3 py-1.5 rounded-lg bg-[#EFE4D2] text-[#6B625B] text-xs hover:bg-[#E7D8C1] transition-all" id="closeReviewAlertBtn">稍后</button>' +
+                "</div></div></div>";
+            document.body.appendChild(popup);
+            reviewPopup = popup;
+            closeReviewBtn = popup.querySelector("#closeReviewAlertBtn");
+        }
+
+        if (pendingReviewCount > 0) {
+            bellBadge.textContent = pendingReviewCount > 99 ? "99+" : String(pendingReviewCount);
+            bellBadge.classList.remove("hidden");
+            const reviewAlertText = document.getElementById("reviewAlertText");
+            if (reviewAlertText) {
+                reviewAlertText.textContent = "当前有 " + pendingReviewCount + " 条问题需要人工复核";
+            }
+        }
+
+        bellBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (reviewPopup) {
+                reviewPopup.classList.toggle("hidden");
+            }
+        });
+
+        document.addEventListener("click", function (e) {
+            if (reviewPopup && !reviewPopup.contains(e.target) && !bellBtn.contains(e.target)) {
+                reviewPopup.classList.add("hidden");
+            }
+        });
+
+        if (closeReviewBtn) {
+            closeReviewBtn.addEventListener("click", function () {
+                reviewPopup.classList.add("hidden");
+            });
+        }
+    }
+
+  const userAvatarNav = document.getElementById("user-avatar-nav");
+  const userAvatarMenu = document.getElementById("userAvatarMenu");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  if (userAvatarNav && userAvatarMenu) {
+    userAvatarNav.addEventListener("click", function (e) {
+      e.stopPropagation();
+      userAvatarMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", function () {
+      userAvatarMenu.classList.add("hidden");
+    });
+  }
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+      localStorage.clear();
+      window.location.href = "../登录/code.html";
+    });
+  }
+
+    const trendChartContainer = document.getElementById("trendChartContainer");
+    const trendChartHitArea = document.getElementById("trendChartHitArea");
+    const trendChartTooltip = document.getElementById("trendChartTooltip");
+    const trendChartGuide = document.getElementById("trendChartGuide");
+    const trendTooltipDay = document.getElementById("trendTooltipDay");
+    const trendTooltipTotal = document.getElementById("trendTooltipTotal");
+    const trendTooltipRisk = document.getElementById("trendTooltipRisk");
+
+    if (trendChartContainer && trendChartHitArea && trendChartTooltip && trendChartGuide && trendTooltipDay && trendTooltipTotal && trendTooltipRisk) {
+        const days = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"];
+        const totalValues = [42, 45, 38, 68, 72, 34, 88];
+        const riskValues = [20, 22, 18, 31, 34, 14, 38];
+
+        const showTooltip = function (clientX) {
+            const rect = trendChartContainer.getBoundingClientRect();
+            const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+            const index = Math.max(0, Math.min(days.length - 1, Math.round((x / rect.width) * (days.length - 1))));
+            const ratio = days.length === 1 ? 0 : index / (days.length - 1);
+            const xPos = ratio * rect.width;
+
+            trendTooltipDay.textContent = days[index];
+            trendTooltipTotal.textContent = "总计: " + totalValues[index];
+            trendTooltipRisk.textContent = "高风险: " + riskValues[index];
+
+            trendChartGuide.style.left = xPos + "px";
+            trendChartGuide.classList.remove("hidden");
+
+            const tooltipWidth = 128;
+            const tooltipX = Math.max(8, Math.min(xPos + 10, rect.width - tooltipWidth - 8));
+            trendChartTooltip.style.left = tooltipX + "px";
+            trendChartTooltip.style.top = "8px";
+            trendChartTooltip.classList.remove("hidden");
+        };
+
+        const hideTooltip = function () {
+            trendChartTooltip.classList.add("hidden");
+            trendChartGuide.classList.add("hidden");
+        };
+
+        trendChartHitArea.addEventListener("pointermove", function (e) {
+            showTooltip(e.clientX);
+        });
+
+        trendChartHitArea.addEventListener("pointerdown", function (e) {
+            showTooltip(e.clientX);
+        });
+
+        trendChartHitArea.addEventListener("pointerleave", hideTooltip);
+    }
+</script>
 </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+

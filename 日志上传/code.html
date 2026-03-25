@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html class="dark" lang="zh-CN">
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -15,56 +15,56 @@
                 extend: {
                     colors: {
                         "outline": "#777575",
-                        "tertiary-dim": "#d875f7",
-                        "surface-container-low": "#141313",
+                        "tertiary-dim": "#AE7440",
+                        "surface-container-low": "#F3EBDD",
                         "on-error": "#490013",
                         "on-primary": "#64006c",
                         "on-secondary-fixed": "#530081",
-                        "secondary-container": "#7b0fb9",
+                        "secondary-container": "#8c623a",
                         "outline-variant": "#494847",
                         "primary-container": "#df7be0",
-                        "background": "#0e0e0e",
+                        "background": "#EBDEC6",
                         "on-tertiary-fixed-variant": "#62007f",
                         "on-tertiary-fixed": "#2d003d",
-                        "tertiary-fixed-dim": "#de7afd",
+                        "tertiary-fixed-dim": "#B9824A",
                         "inverse-on-surface": "#565554",
                         "inverse-surface": "#fcf8f8",
                         "on-primary-container": "#430048",
-                        "primary-fixed": "#fa93fa",
-                        "surface-container-lowest": "#000000",
+                        "primary-fixed": "#8A5A2B",
+                        "surface-container-lowest": "#ffffff",
                         "on-primary-fixed": "#3f0044",
                         "on-secondary-container": "#f2d5ff",
-                        "surface-container": "#1a1919",
-                        "surface-variant": "#262625",
+                        "surface-container": "#F7F2E8",
+                        "surface-variant": "#e5e7eb",
                         "error": "#ff6e84",
                         "on-secondary": "#360056",
-                        "surface-tint": "#fa93fa",
-                        "surface-container-highest": "#262625",
-                        "secondary": "#ca7bff",
-                        "inverse-primary": "#943899",
+                        "surface-tint": "#8A5A2B",
+                        "surface-container-highest": "#E7D8C1",
+                        "secondary": "#B07A47",
+                        "inverse-primary": "#8A5A2B",
                         "error-container": "#a70138",
                         "on-secondary-fixed-variant": "#7b10b9",
                         "on-primary-fixed-variant": "#6f1076",
-                        "primary": "#fa93fa",
+                        "primary": "#8A5A2B",
                         "on-tertiary": "#54006e",
-                        "on-surface": "#ffffff",
+                        "on-surface": "#352E2A",
                         "on-tertiary-container": "#420057",
-                        "tertiary-fixed": "#e68fff",
-                        "tertiary": "#e68fff",
-                        "on-background": "#ffffff",
-                        "tertiary-container": "#de7afd",
+                        "tertiary-fixed": "#C58B52",
+                        "tertiary": "#C58B52",
+                        "on-background": "#352E2A",
+                        "tertiary-container": "#B9824A",
                         "secondary-fixed-dim": "#e2b1ff",
                         "secondary-fixed": "#eac4ff",
-                        "primary-fixed-dim": "#eb86ec",
+                        "primary-fixed-dim": "#7A4E26",
                         "on-error-container": "#ffb2b9",
-                        "surface-bright": "#2d2c2c",
-                        "secondary-dim": "#ca7bff",
-                        "surface-container-high": "#201f1f",
-                        "primary-dim": "#eb86ec",
-                        "surface-dim": "#0e0e0e",
-                        "surface": "#0e0e0e",
+                        "surface-bright": "#ffffff",
+                        "secondary-dim": "#B07A47",
+                        "surface-container-high": "#EFE4D2",
+                        "primary-dim": "#7A4E26",
+                        "surface-dim": "#f3f4f6",
+                        "surface": "#ffffff",
                         "error-dim": "#d73357",
-                        "on-surface-variant": "#adaaaa"
+                        "on-surface-variant": "#352E2A"
                     },
                     fontFamily: {
                         "headline": ["Manrope"],
@@ -77,56 +77,113 @@
         }
     </script>
 <style>
-        body { background-color: #010101; }
+        body { background-color: #EBDEC6; }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
+            background: #F7F2E8;
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
         .primary-gradient {
-            background: linear-gradient(135deg, #FA93FA 0%, #C967E8 50%, #983AD6 100%);
+            background: linear-gradient(135deg, #8A5A2B 0%, #A8733A 50%, #6B4422 100%);
         }
         .text-gradient {
-            background: linear-gradient(to right, #FA93FA, #C967E8, #983AD6);
+            background: linear-gradient(to right, #8A5A2B, #A8733A, #6B4422);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    </style>
+            .glass-card,
+        .glass-panel,
+        .obsidian-card,
+        .bg-surface-container,
+        .bg-surface-container-high,
+        .bg-surface-container-highest,
+        .bg-surface-container-low {
+            color: #352E2A;
+        }
+        .glass-card .text-white,
+        .glass-panel .text-white,
+        .obsidian-card .text-white,
+        .bg-surface-container .text-white,
+        .bg-surface-container-high .text-white,
+        .bg-surface-container-highest .text-white,
+        .bg-surface-container-low .text-white,
+        .glass-card .text-white\/90,
+        .glass-panel .text-white\/90,
+        .obsidian-card .text-white\/90,
+        .glass-card .text-white\/80,
+        .glass-panel .text-white\/80,
+        .obsidian-card .text-white\/80,
+        .glass-card .text-white\/70,
+        .glass-panel .text-white\/70,
+        .obsidian-card .text-white\/70,
+        .glass-card .text-white\/60,
+        .glass-panel .text-white\/60,
+        .obsidian-card .text-white\/60,
+        .glass-card .text-white\/50,
+        .glass-panel .text-white\/50,
+        .obsidian-card .text-white\/50,
+        .glass-card .text-white\/40,
+        .glass-panel .text-white\/40,
+        .obsidian-card .text-white\/40,
+        .glass-card .text-white\/30,
+        .glass-panel .text-white\/30,
+        .obsidian-card .text-white\/30 {
+            color: #6B625B !important;
+        }            :root {
+            --unified-text-color: #352E2A;
+        }
+        body,
+        h1, h2, h3, h4, h5, h6,
+        p, span, a, button, label,
+        li, td, th,
+        input, textarea, select {
+            color: var(--unified-text-color) !important;
+        }    </style>
 </head>
 <body class="font-body text-on-background selection:bg-primary/30">
 <!-- SideNavBar (Execution from JSON) -->
-<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#0e0e0e] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#B57743] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
 <div class="py-8 px-6">
 <h1 class="font-headline font-black text-white text-xl tracking-tight">智能日志分析系统</h1>
 <p class="font-label text-[10px] uppercase tracking-widest text-white/40 mt-1">Luminous Obsidian AI</p>
 </div>
 <nav class="flex flex-col px-4 space-y-2 mt-4">
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../工作台/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../工作台/code.html" style="">
 <span class="material-symbols-outlined" data-icon="dashboard" style="">dashboard</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">工作台</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white/10 text-white border-r-4 border-[#C967E8] backdrop-blur-md transition-all duration-300" href="../日志上传/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] border-r-4 border-[#A8733A] backdrop-blur-md transition-all duration-300" href="../日志上传/code.html" style="">
 <span class="material-symbols-outlined" data-icon="analytics" style="">analytics</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">日志分析</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../问题中心/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../问题中心/code.html" style="">
 <span class="material-symbols-outlined" data-icon="biotech" style="">biotech</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">问题处理</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../历史日志存档/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../历史日志存档/code.html" style="">
 <span class="material-symbols-outlined" data-icon="history_edu" style="">history_edu</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">历史与知识</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../规则配置管理/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../规则配置管理/code.html" style="">
 <span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">系统管理</span>
 </a>
 </nav>
 <div class="mt-auto px-6 py-8">
-<a class="w-full py-3 rounded-xl primary-gradient text-on-primary font-bold shadow-[0_0_20px_rgba(201,103,232,0.3)] hover:opacity-90 transition-opacity block text-center" href="../分析记录/code.html" style="">
+<a class="w-full py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] font-bold shadow-lg hover:bg-[#EFE4D2] active:scale-95 transition-transform block text-center" href="../分析记录/code.html" style="">
                 进入分析记录
             </a>
+<div class="mt-6 flex flex-col space-y-3">
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#" style="">
+<span class="material-symbols-outlined text-sm" style="">help</span>
+<span class="" style="">帮助中心</span>
+</a>
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#" style="">
+<span class="material-symbols-outlined text-sm" style="">description</span>
+<span class="" style="">技术文档</span>
+</a>
+</div>
 </div>
 </aside>
 <!-- TopNavBar (Execution from JSON) -->
@@ -145,12 +202,16 @@
 <button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors">
 <span class="material-symbols-outlined">widgets</span>
 </button>
-<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative">
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative" id="notificationBellBtn">
 <span class="material-symbols-outlined">notifications</span>
-<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+<span class="hidden absolute -top-0.5 -right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-error text-[10px] leading-4 text-white text-center" id="notificationBellBadge"></span>
 </button>
-<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30 cursor-pointer">
-<img alt="用户头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+<div class="w-8 h-8 rounded-full border border-primary/30 cursor-pointer relative" id="user-avatar-nav">
+<img alt="用户头像" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+<div class="hidden absolute top-full right-0 mt-2 w-48 rounded-xl bg-[#F7F2E8]/95 backdrop-blur-xl border border-[#D8C7AE] shadow-xl z-50" id="userAvatarMenu">
+<a href="../个人页面/code.html" class="block px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors border-b border-[#E2D5C2]/80 first:rounded-t-xl">个人页面</a>
+<button id="logoutBtn" class="w-full text-left px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors last:rounded-b-xl">退出登录</button>
+</div>
 </div>
 </div>
 </div>
@@ -185,10 +246,10 @@
 </div>
 </div>
 <!-- File List / Progress Section -->
-<div class="space-y-4">
+<div class="space-y-4" id="selected-files-list">
 <h4 class="text-sm font-label font-bold text-white/40 px-2 tracking-widest uppercase" style="">已选择的文件</h4>
 <!-- File Card 1 -->
-<div class="glass-panel rounded-2xl p-4 flex items-center gap-4 group transition-all hover:bg-white/5">
+<div class="glass-panel rounded-2xl p-4 flex items-center gap-4 group transition-all hover:bg-white/5" data-file-card="true">
 <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
 <span class="material-symbols-outlined text-primary" data-icon="description" style="">description</span>
 </div>
@@ -209,7 +270,7 @@
 </div>
 </div>
 <!-- File Card 2 (Success State) -->
-<div class="glass-panel rounded-2xl p-4 flex items-center gap-4 group transition-all hover:bg-white/5">
+<div class="glass-panel rounded-2xl p-4 flex items-center gap-4 group transition-all hover:bg-white/5" data-file-card="true">
 <div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20">
 <span class="material-symbols-outlined text-tertiary" data-icon="data_object" style="">data_object</span>
 </div>
@@ -253,6 +314,46 @@
 </div>
 <script>
             const startAnalysisBtn = document.getElementById("start-analysis-btn");
+            const selectedFilesList = document.getElementById("selected-files-list");
+
+            function updateSelectedFilesEmptyState() {
+                if (!selectedFilesList) return;
+                const fileCards = selectedFilesList.querySelectorAll("[data-file-card='true']");
+                const existingEmpty = document.getElementById("selected-files-empty");
+
+                if (fileCards.length === 0) {
+                    if (!existingEmpty) {
+                        const emptyTip = document.createElement("p");
+                        emptyTip.id = "selected-files-empty";
+                        emptyTip.className = "text-sm font-label text-white/50 px-2 py-4";
+                        emptyTip.textContent = "暂无文件，请上传日志后再开始分析。";
+                        selectedFilesList.appendChild(emptyTip);
+                    }
+                } else if (existingEmpty) {
+                    existingEmpty.remove();
+                }
+            }
+
+            if (selectedFilesList) {
+                selectedFilesList.addEventListener("click", (event) => {
+                    const target = event.target;
+                    if (!(target instanceof Element)) return;
+
+                    const actionButton = target.closest("button");
+                    if (!actionButton) return;
+
+                    const icon = actionButton.querySelector("[data-icon]");
+                    const iconName = icon ? icon.getAttribute("data-icon") : "";
+                    if (iconName !== "close" && iconName !== "delete") return;
+
+                    const card = actionButton.closest("[data-file-card='true']");
+                    if (!card) return;
+
+                    card.remove();
+                    updateSelectedFilesEmptyState();
+                });
+            }
+
             if (startAnalysisBtn) {
                 startAnalysisBtn.addEventListener("click", () => {
                     startAnalysisBtn.disabled = true;
@@ -263,5 +364,101 @@
                     }, 900);
                 });
             }
+
+            updateSelectedFilesEmptyState();
+        </script>
+
+        <script>
+            const bellBtn = document.getElementById("notificationBellBtn");
+            const bellBadge = document.getElementById("notificationBellBadge");
+            let reviewPopup = document.getElementById("reviewAlertPopup");
+            let closeReviewBtn = document.getElementById("closeReviewAlertBtn");
+            const pendingReviewCount = Number(localStorage.getItem("pendingHumanReviewCount") || "2");
+
+            if (bellBtn && bellBadge) {
+                if (!reviewPopup) {
+                    const popup = document.createElement("div");
+                    popup.id = "reviewAlertPopup";
+                    popup.className = "hidden fixed top-20 right-8 z-[80] w-80 rounded-2xl border border-primary/30 bg-[#F7F2E8]/95 backdrop-blur-xl p-4 shadow-[0_12px_30px_rgba(0,0,0,0.45)]";
+                    popup.innerHTML =
+                        '<div class="flex items-start gap-3">' +
+                        '<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: \'FILL\' 1;">notification_important</span>' +
+                        '<div class="flex-1">' +
+                        '<p class="text-sm font-bold text-[#352E2A]">人工复核提醒</p>' +
+                        '<p class="text-xs text-[#6B625B] mt-1" id="reviewAlertText"></p>' +
+                        '<div class="mt-3 flex items-center gap-2">' +
+                        '<a class="px-3 py-1.5 rounded-lg bg-primary/20 text-primary text-xs font-bold hover:bg-primary/30 transition-all" href="../人工复核/code.html">去处理</a>' +
+                        '<button class="px-3 py-1.5 rounded-lg bg-[#EFE4D2] text-[#6B625B] text-xs hover:bg-[#E7D8C1] transition-all" id="closeReviewAlertBtn">稍后</button>' +
+                        "</div></div></div>";
+                    document.body.appendChild(popup);
+                    reviewPopup = popup;
+                    closeReviewBtn = popup.querySelector("#closeReviewAlertBtn");
+                }
+
+                if (pendingReviewCount > 0) {
+                    bellBadge.textContent = pendingReviewCount > 99 ? "99+" : String(pendingReviewCount);
+                    bellBadge.classList.remove("hidden");
+                    const reviewAlertText = document.getElementById("reviewAlertText");
+                    if (reviewAlertText) {
+                        reviewAlertText.textContent = "当前有 " + pendingReviewCount + " 条问题需要人工复核";
+                    }
+                }
+
+                bellBtn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    if (reviewPopup) {
+                        reviewPopup.classList.toggle("hidden");
+                    }
+                });
+
+                document.addEventListener("click", function (e) {
+                    if (reviewPopup && !reviewPopup.contains(e.target) && !bellBtn.contains(e.target)) {
+                        reviewPopup.classList.add("hidden");
+                    }
+                });
+
+                if (closeReviewBtn) {
+                    closeReviewBtn.addEventListener("click", function () {
+                        reviewPopup.classList.add("hidden");
+                    });
+                }
+            }
+
+            const userAvatarNav = document.getElementById("user-avatar-nav");
+            const userAvatarMenu = document.getElementById("userAvatarMenu");
+            const logoutBtn = document.getElementById("logoutBtn");
+
+            if (userAvatarNav && userAvatarMenu) {
+                userAvatarNav.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    userAvatarMenu.classList.toggle("hidden");
+                });
+
+                document.addEventListener("click", function () {
+                    userAvatarMenu.classList.add("hidden");
+                });
+            }
+
+            if (logoutBtn) {
+                logoutBtn.addEventListener("click", function () {
+                    localStorage.clear();
+                    window.location.href = "../登录/code.html";
+                });
+            }
         </script>
 </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

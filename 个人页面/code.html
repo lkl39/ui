@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html class="dark" lang="zh-CN">
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -13,16 +13,16 @@
     theme: {
       extend: {
         colors: {
-          "background": "#0e0e0e",
-          "surface": "#0e0e0e",
-          "surface-container": "#1a1919",
-          "surface-container-high": "#201f1f",
-          "surface-container-highest": "#262625",
-          "on-surface": "#ffffff",
-          "on-surface-variant": "#adaaaa",
-          "primary": "#fa93fa",
-          "secondary": "#ca7bff",
-          "tertiary": "#e68fff",
+          "background": "#EBDEC6",
+          "surface": "#ffffff",
+          "surface-container": "#F7F2E8",
+          "surface-container-high": "#EFE4D2",
+          "surface-container-highest": "#E7D8C1",
+          "on-surface": "#352E2A",
+          "on-surface-variant": "#352E2A",
+          "primary": "#8A5A2B",
+          "secondary": "#B07A47",
+          "tertiary": "#C58B52",
           "error": "#ff6e84"
         },
         fontFamily: {
@@ -39,31 +39,78 @@
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
   .glass-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: #F7F2E8;
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
-</style>
+        .glass-card,
+        .glass-panel,
+        .obsidian-card,
+        .bg-surface-container,
+        .bg-surface-container-high,
+        .bg-surface-container-highest,
+        .bg-surface-container-low {
+            color: #352E2A;
+        }
+        .glass-card .text-white,
+        .glass-panel .text-white,
+        .obsidian-card .text-white,
+        .bg-surface-container .text-white,
+        .bg-surface-container-high .text-white,
+        .bg-surface-container-highest .text-white,
+        .bg-surface-container-low .text-white,
+        .glass-card .text-white\/90,
+        .glass-panel .text-white\/90,
+        .obsidian-card .text-white\/90,
+        .glass-card .text-white\/80,
+        .glass-panel .text-white\/80,
+        .obsidian-card .text-white\/80,
+        .glass-card .text-white\/70,
+        .glass-panel .text-white\/70,
+        .obsidian-card .text-white\/70,
+        .glass-card .text-white\/60,
+        .glass-panel .text-white\/60,
+        .obsidian-card .text-white\/60,
+        .glass-card .text-white\/50,
+        .glass-panel .text-white\/50,
+        .obsidian-card .text-white\/50,
+        .glass-card .text-white\/40,
+        .glass-panel .text-white\/40,
+        .obsidian-card .text-white\/40,
+        .glass-card .text-white\/30,
+        .glass-panel .text-white\/30,
+        .obsidian-card .text-white\/30 {
+            color: #6B625B !important;
+        }            :root {
+            --unified-text-color: #352E2A;
+        }
+        body,
+        h1, h2, h3, h4, h5, h6,
+        p, span, a, button, label,
+        li, td, th,
+        input, textarea, select {
+            color: var(--unified-text-color) !important;
+        }    </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary/30">
-<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#0e0e0e] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#B57743] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
   <div class="py-8 px-6">
     <h1 class="font-headline font-black text-white text-xl tracking-tight">智能日志分析系统</h1>
     <p class="font-label text-[10px] uppercase tracking-widest text-white/40 mt-1">Luminous Obsidian AI</p>
   </div>
   <nav class="flex flex-col px-4 space-y-2 mt-4">
-    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../工作台/code.html"><span class="material-symbols-outlined">dashboard</span><span class="font-label text-sm uppercase tracking-widest">工作台</span></a>
-    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../日志上传/code.html"><span class="material-symbols-outlined">analytics</span><span class="font-label text-sm uppercase tracking-widest">日志分析</span></a>
-    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../问题中心/code.html"><span class="material-symbols-outlined">biotech</span><span class="font-label text-sm uppercase tracking-widest">问题处理</span></a>
-    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../历史日志存档/code.html"><span class="material-symbols-outlined">history_edu</span><span class="font-label text-sm uppercase tracking-widest">历史与知识</span></a>
-    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white/10 text-white border-r-4 border-[#C967E8] backdrop-blur-md transition-all duration-300" href="../系统设置/code.html"><span class="material-symbols-outlined">settings_suggest</span><span class="font-label text-sm uppercase tracking-widest">系统管理</span></a>
+    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../工作台/code.html"><span class="material-symbols-outlined">dashboard</span><span class="font-label text-sm uppercase tracking-widest">工作台</span></a>
+    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../日志上传/code.html"><span class="material-symbols-outlined">analytics</span><span class="font-label text-sm uppercase tracking-widest">日志分析</span></a>
+    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../问题中心/code.html"><span class="material-symbols-outlined">biotech</span><span class="font-label text-sm uppercase tracking-widest">问题处理</span></a>
+    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../历史日志存档/code.html"><span class="material-symbols-outlined">history_edu</span><span class="font-label text-sm uppercase tracking-widest">历史与知识</span></a>
+    <a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] border-r-4 border-[#A8733A] backdrop-blur-md transition-all duration-300" href="../系统设置/code.html"><span class="material-symbols-outlined">settings_suggest</span><span class="font-label text-sm uppercase tracking-widest">系统管理</span></a>
   </nav>
   <div class="mt-auto px-6 py-8">
-    <a class="w-full py-3 rounded-xl bg-gradient-to-r from-[#FA93FA] via-[#C967E8] to-[#983AD6] text-white font-bold text-sm shadow-lg active:scale-95 transition-transform mb-6 block text-center" href="../工作台/code.html">返回工作台</a>
+    <a class="w-full py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] font-bold text-sm shadow-lg hover:bg-[#EFE4D2] active:scale-95 transition-transform mb-6 block text-center" href="../工作台/code.html">返回工作台</a>
     <div class="flex flex-col space-y-3">
-      <a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#"><span class="material-symbols-outlined text-sm">help</span><span>帮助中心</span></a>
-      <a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#"><span class="material-symbols-outlined text-sm">description</span><span>技术文档</span></a>
+      <a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#"><span class="material-symbols-outlined text-sm">help</span><span>帮助中心</span></a>
+      <a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#"><span class="material-symbols-outlined text-sm">description</span><span>技术文档</span></a>
     </div>
   </div>
 </aside>
@@ -264,3 +311,16 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

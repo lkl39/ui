@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
-<html class="dark" lang="zh-CN"><head>
+<html lang="zh-CN"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>智能日志分析 - 历史与知识</title>
@@ -13,57 +13,57 @@
             theme: {
                 extend: {
                     colors: {
-                        "tertiary-container": "#de7afd",
-                        "on-surface": "#ffffff",
+                        "tertiary-container": "#B9824A",
+                        "on-surface": "#352E2A",
                         "on-error": "#490013",
                         "outline-variant": "#494847",
-                        "surface-dim": "#0e0e0e",
+                        "surface-dim": "#f3f4f6",
                         "primary-container": "#df7be0",
-                        "secondary": "#ca7bff",
-                        "inverse-primary": "#943899",
+                        "secondary": "#B07A47",
+                        "inverse-primary": "#8A5A2B",
                         "error-dim": "#d73357",
-                        "primary-fixed": "#fa93fa",
+                        "primary-fixed": "#8A5A2B",
                         "inverse-on-surface": "#565554",
                         "error-container": "#a70138",
                         "on-tertiary-fixed": "#2d003d",
-                        "secondary-container": "#7b0fb9",
-                        "surface-container-highest": "#262625",
-                        "tertiary-fixed-dim": "#de7afd",
-                        "surface-container-high": "#201f1f",
-                        "primary": "#fa93fa",
-                        "surface-bright": "#2d2c2c",
+                        "secondary-container": "#8c623a",
+                        "surface-container-highest": "#E7D8C1",
+                        "tertiary-fixed-dim": "#B9824A",
+                        "surface-container-high": "#EFE4D2",
+                        "primary": "#8A5A2B",
+                        "surface-bright": "#ffffff",
                         "on-error-container": "#ffb2b9",
-                        "surface-tint": "#fa93fa",
-                        "surface": "#0e0e0e",
+                        "surface-tint": "#8A5A2B",
+                        "surface": "#ffffff",
                         "on-secondary-fixed": "#530081",
-                        "on-background": "#ffffff",
-                        "surface-container-lowest": "#000000",
-                        "secondary-dim": "#ca7bff",
+                        "on-background": "#352E2A",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-dim": "#B07A47",
                         "on-primary-fixed": "#3f0044",
-                        "surface-container": "#1a1919",
-                        "primary-fixed-dim": "#eb86ec",
+                        "surface-container": "#F7F2E8",
+                        "primary-fixed-dim": "#7A4E26",
                         "on-secondary-container": "#f2d5ff",
-                        "primary-dim": "#eb86ec",
-                        "tertiary": "#e68fff",
+                        "primary-dim": "#7A4E26",
+                        "tertiary": "#C58B52",
                         "on-secondary": "#360056",
                         "on-tertiary-container": "#420057",
                         "on-primary": "#64006c",
                         "secondary-fixed": "#eac4ff",
-                        "on-surface-variant": "#adaaaa",
+                        "on-surface-variant": "#352E2A",
                         "on-primary-fixed-variant": "#6f1076",
                         "secondary-fixed-dim": "#e2b1ff",
-                        "surface-variant": "#262625",
-                        "tertiary-dim": "#d875f7",
-                        "tertiary-fixed": "#e68fff",
+                        "surface-variant": "#e5e7eb",
+                        "tertiary-dim": "#AE7440",
+                        "tertiary-fixed": "#C58B52",
                         "outline": "#777575",
                         "on-tertiary": "#54006e",
                         "on-secondary-fixed-variant": "#7b10b9",
                         "on-tertiary-fixed-variant": "#62007f",
                         "on-primary-container": "#430048",
                         "inverse-surface": "#fcf8f8",
-                        "surface-container-low": "#141313",
+                        "surface-container-low": "#F3EBDD",
                         "error": "#ff6e84",
-                        "background": "#0e0e0e"
+                        "background": "#EBDEC6"
                     },
                     fontFamily: {
                         "headline": ["Manrope"],
@@ -80,61 +80,108 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         body {
-            background-color: #0e0e0e;
-            color: #ffffff;
+            background-color: #EBDEC6;
+            color: #0f172a;
             font-family: 'Inter', sans-serif;
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.05);
+            background: #F7F2E8;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
         .obsidian-card {
-            background: #1a1919;
+            background: #F7F2E8;
             transition: all 0.3s ease;
         }
         .obsidian-card:hover {
-            background: #201f1f;
+            background: #F7F2E8;
         }
-    </style>
+            .glass-card,
+        .glass-panel,
+        .obsidian-card,
+        .bg-surface-container,
+        .bg-surface-container-high,
+        .bg-surface-container-highest,
+        .bg-surface-container-low {
+            color: #352E2A;
+        }
+        .glass-card .text-white,
+        .glass-panel .text-white,
+        .obsidian-card .text-white,
+        .bg-surface-container .text-white,
+        .bg-surface-container-high .text-white,
+        .bg-surface-container-highest .text-white,
+        .bg-surface-container-low .text-white,
+        .glass-card .text-white\/90,
+        .glass-panel .text-white\/90,
+        .obsidian-card .text-white\/90,
+        .glass-card .text-white\/80,
+        .glass-panel .text-white\/80,
+        .obsidian-card .text-white\/80,
+        .glass-card .text-white\/70,
+        .glass-panel .text-white\/70,
+        .obsidian-card .text-white\/70,
+        .glass-card .text-white\/60,
+        .glass-panel .text-white\/60,
+        .obsidian-card .text-white\/60,
+        .glass-card .text-white\/50,
+        .glass-panel .text-white\/50,
+        .obsidian-card .text-white\/50,
+        .glass-card .text-white\/40,
+        .glass-panel .text-white\/40,
+        .obsidian-card .text-white\/40,
+        .glass-card .text-white\/30,
+        .glass-panel .text-white\/30,
+        .obsidian-card .text-white\/30 {
+            color: #6B625B !important;
+        }            :root {
+            --unified-text-color: #352E2A;
+        }
+        body,
+        h1, h2, h3, h4, h5, h6,
+        p, span, a, button, label,
+        li, td, th,
+        input, textarea, select {
+            color: var(--unified-text-color) !important;
+        }    </style>
 </head>
-<body class="flex min-h-screen">
+<body class="flex min-h-screen bg-background text-on-surface font-body">
 <!-- Side Navigation -->
-<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#0e0e0e] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#B57743] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
 <div class="py-8 px-6">
 <h1 class="font-headline font-black text-white text-xl tracking-tight" style="">智能日志分析系统</h1>
 <p class="font-label text-[10px] uppercase tracking-widest text-white/40 mt-1" style="">Luminous Obsidian AI</p>
 </div>
 <nav class="flex flex-col px-4 space-y-2 mt-4">
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../工作台/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../工作台/code.html" style="">
 <span class="material-symbols-outlined" style="">dashboard</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">工作台</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../日志上传/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../日志上传/code.html" style="">
 <span class="material-symbols-outlined" style="">analytics</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">日志分析</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../问题中心/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../问题中心/code.html" style="">
 <span class="material-symbols-outlined" style="">biotech</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">问题处理</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white/10 text-white border-r-4 border-[#C967E8] backdrop-blur-md transition-all duration-300" href="../历史日志存档/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] border-r-4 border-[#A8733A] backdrop-blur-md transition-all duration-300" href="../历史日志存档/code.html" style="">
 <span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'">history_edu</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">历史与知识</span>
 </a>
-<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../规则配置管理/code.html" style="">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#352E2A] hover:text-[#352E2A] hover:bg-[#F7F2E8]/70 transition-all duration-200" href="../规则配置管理/code.html" style="">
 <span class="material-symbols-outlined" style="">settings_suggest</span>
 <span class="font-label text-sm uppercase tracking-widest" style="">系统管理</span>
 </a>
 </nav>
 <div class="mt-auto px-6 py-8">
-<button class="w-full py-3 rounded-xl bg-gradient-to-r from-[#FA93FA] via-[#C967E8] to-[#983AD6] text-on-primary font-bold text-sm shadow-lg active:scale-95 transition-transform" style="">开始新分析</button>
+<button class="w-full py-3 rounded-xl bg-[#F7F2E8] text-[#352E2A] font-bold text-sm shadow-lg hover:bg-[#EFE4D2] active:scale-95 transition-transform" style="">开始新分析</button>
 <div class="mt-6 flex flex-col space-y-3">
-<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#" style="">
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#" style="">
 <span class="material-symbols-outlined text-sm" style="">help</span>
 <span class="" style="">帮助中心</span>
 </a>
-<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#" style="">
+<a class="flex items-center space-x-2 text-[#352E2A] hover:text-[#352E2A] transition-colors text-xs font-label uppercase" href="#" style="">
 <span class="material-symbols-outlined text-sm" style="">description</span>
 <span class="" style="">技术文档</span>
 </a>
@@ -158,12 +205,16 @@
 <button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors">
 <span class="material-symbols-outlined">widgets</span>
 </button>
-<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative">
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative" id="notificationBellBtn">
 <span class="material-symbols-outlined">notifications</span>
-<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+<span class="hidden absolute -top-0.5 -right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-error text-[10px] leading-4 text-white text-center" id="notificationBellBadge"></span>
 </button>
-<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30 cursor-pointer">
-<img alt="用户头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+<div class="w-8 h-8 rounded-full border border-primary/30 cursor-pointer relative" id="user-avatar-nav">
+<img alt="用户头像" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+<div class="hidden absolute top-full right-0 mt-2 w-48 rounded-xl bg-[#F7F2E8]/95 backdrop-blur-xl border border-[#D8C7AE] shadow-xl z-50" id="userAvatarMenu">
+<a href="../个人页面/code.html" class="block px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors border-b border-[#E2D5C2]/80 first:rounded-t-xl">个人页面</a>
+<button id="logoutBtn" class="w-full text-left px-4 py-3 text-sm text-[#4A4038] hover:bg-[#EFE4D2] transition-colors last:rounded-b-xl">退出登录</button>
+</div>
 </div>
 </div>
 </div>
@@ -176,7 +227,7 @@
 <div class="relative z-10 flex justify-between items-end">
 <div>
 <h2 class="text-4xl font-extrabold font-headline tracking-tight text-white mb-2">历史日志存档</h2>
-<p class="text-on-surface-variant font-body text-sm max-w-xl">查看、筛选并分析过去所有的日志运行记录。系统自动保留最近90天的详细分析报告及元数据。</p>
+<p class="text-on-surface-variant font-body text-sm md:whitespace-nowrap">查看、筛选并分析过去所有的日志运行记录。系统自动保留最近90天的详细分析报告及元数据。</p>
 </div>
 <div class="flex gap-3">
 <button class="px-5 py-2.5 rounded-xl glass-panel text-white/90 border border-white/10 hover:border-primary/40 transition-all text-sm font-medium flex items-center gap-2">
@@ -185,13 +236,13 @@
 </div>
 </div>
 
-<section class="mb-8 sticky top-20 z-20 glass-panel rounded-2xl border border-white/10 p-4">
+<section class="mt-6 mb-8 glass-panel rounded-2xl border border-white/10 p-4">
 <div class="flex items-center justify-between mb-3">
 <p class="text-[10px] font-label uppercase tracking-widest text-white/40">历史与知识自由切换</p>
 <span class="text-[10px] text-white/30">在三个页面之间快速跳转</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-<a class="px-4 py-3 rounded-xl bg-gradient-to-r from-[#FA93FA]/25 to-transparent text-[#FA93FA] border border-[#FA93FA]/30 text-sm font-bold text-center" href="../历史日志存档/code.html">历史日志存档（当前）</a>
+<a class="px-4 py-3 rounded-xl bg-gradient-to-r from-[#8A5A2B]/25 to-transparent text-[#8A5A2B] border border-[#8A5A2B]/30 text-sm font-bold text-center" href="../历史日志存档/code.html">历史日志存档（当前）</a>
 <a class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-white/20 transition-all text-sm font-medium text-center" href="../历史问题库/code.html">历史问题库</a>
 <a class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-white/20 transition-all text-sm font-medium text-center" href="../探索根因知识库/code.html">探索根因知识库</a>
 </div>
@@ -226,7 +277,7 @@
 </div>
 </div>
 <!-- Table Section (Obsidian Style) -->
-<div class="bg-surface-container-low rounded-3xl overflow-hidden border border-white/5 shadow-2xl shadow-black/50">
+<div class="mt-6 bg-surface-container-low rounded-3xl overflow-hidden border border-white/5 shadow-2xl shadow-black/50">
 <table class="w-full text-left border-collapse">
 <thead>
 <tr class="border-b border-white/5 bg-white/[0.02]">
@@ -247,8 +298,7 @@
 </div>
 </td>
 <td class="px-6 py-5 text-center">
-<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border" style="background:#E8F4EC; border-color:#BFDDC9; color:#2F6A42 !important;">
                                     已完成
                                 </span>
 </td>
@@ -281,8 +331,7 @@
 </div>
 </td>
 <td class="px-6 py-5 text-center">
-<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase tracking-wider border border-amber-500/20">
-<span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border" style="background:#FFF5DE; border-color:#E8D3A1; color:#8A6A24 !important;">
                                     分析中
                                 </span>
 </td>
@@ -315,8 +364,7 @@
 </div>
 </td>
 <td class="px-6 py-5 text-center">
-<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border" style="background:#E8F4EC; border-color:#BFDDC9; color:#2F6A42 !important;">
                                     已完成
                                 </span>
 </td>
@@ -349,8 +397,7 @@
 </div>
 </td>
 <td class="px-6 py-5 text-center">
-<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/20">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border" style="background:#E8F4EC; border-color:#BFDDC9; color:#2F6A42 !important;">
                                     已完成
                                 </span>
 </td>
@@ -393,7 +440,7 @@
 </div>
 </div>
 <!-- Knowledge Base Summary (Asymmetric Layout) -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="md:col-span-1 glass-panel p-6 rounded-3xl border border-white/10 relative overflow-hidden">
 <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-primary/5 blur-[40px] rounded-full"></div>
 <h4 class="text-lg font-bold text-white mb-4">知识沉淀</h4>
@@ -411,7 +458,7 @@
 <div class="flex-1 bg-white/5 hover:bg-primary/40 rounded-t-sm h-[30%] transition-all"></div>
 <div class="flex-1 bg-white/5 hover:bg-primary/40 rounded-t-sm h-[70%] transition-all"></div>
 <div class="flex-1 bg-white/5 hover:bg-primary/40 rounded-t-sm h-[55%] transition-all"></div>
-<div class="flex-1 bg-primary/60 rounded-t-sm h-[100%] transition-all shadow-[0_-10px_20px_rgba(250,147,250,0.2)]"></div>
+<div class="flex-1 bg-primary/60 rounded-t-sm h-[100%] transition-all shadow-[0_-10px_20px_rgba(168,115,58,0.2)]"></div>
 </div>
 <div class="flex justify-between mt-3 px-1">
 <span class="text-[9px] font-label text-white/20 uppercase tracking-widest">11/18</span>
@@ -425,11 +472,106 @@
 </div>
 <div class="p-3 bg-white/5 rounded-2xl">
 <span class="text-[10px] text-white/40 block">本月任务数</span>
-<span class="text-xl font-bold font-label text-[#FA93FA]">382 次</span>
+<span class="text-xl font-bold font-label text-[#8A5A2B]">382 次</span>
 </div>
 </div>
 </div>
 </div>
 </div>
 </main>
+
+<script>
+    const bellBtn = document.getElementById("notificationBellBtn");
+    const bellBadge = document.getElementById("notificationBellBadge");
+    let reviewPopup = document.getElementById("reviewAlertPopup");
+    let closeReviewBtn = document.getElementById("closeReviewAlertBtn");
+    const pendingReviewCount = Number(localStorage.getItem("pendingHumanReviewCount") || "2");
+
+    if (bellBtn && bellBadge) {
+        if (!reviewPopup) {
+            const popup = document.createElement("div");
+            popup.id = "reviewAlertPopup";
+            popup.className = "hidden fixed top-20 right-8 z-[80] w-80 rounded-2xl border border-primary/30 bg-[#F7F2E8]/95 backdrop-blur-xl p-4 shadow-[0_12px_30px_rgba(0,0,0,0.45)]";
+            popup.innerHTML =
+                '<div class="flex items-start gap-3">' +
+                '<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: \'FILL\' 1;">notification_important</span>' +
+                '<div class="flex-1">' +
+                '<p class="text-sm font-bold text-[#352E2A]">人工复核提醒</p>' +
+                '<p class="text-xs text-[#6B625B] mt-1" id="reviewAlertText"></p>' +
+                '<div class="mt-3 flex items-center gap-2">' +
+                '<a class="px-3 py-1.5 rounded-lg bg-primary/20 text-primary text-xs font-bold hover:bg-primary/30 transition-all" href="../人工复核/code.html">去处理</a>' +
+                '<button class="px-3 py-1.5 rounded-lg bg-[#EFE4D2] text-[#6B625B] text-xs hover:bg-[#E7D8C1] transition-all" id="closeReviewAlertBtn">稍后</button>' +
+                "</div></div></div>";
+            document.body.appendChild(popup);
+            reviewPopup = popup;
+            closeReviewBtn = popup.querySelector("#closeReviewAlertBtn");
+        }
+
+        if (pendingReviewCount > 0) {
+            bellBadge.textContent = pendingReviewCount > 99 ? "99+" : String(pendingReviewCount);
+            bellBadge.classList.remove("hidden");
+            const reviewAlertText = document.getElementById("reviewAlertText");
+            if (reviewAlertText) {
+                reviewAlertText.textContent = "当前有 " + pendingReviewCount + " 条问题需要人工复核";
+            }
+        }
+
+        bellBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (reviewPopup) {
+                reviewPopup.classList.toggle("hidden");
+            }
+        });
+
+        document.addEventListener("click", function (e) {
+            if (reviewPopup && !reviewPopup.contains(e.target) && !bellBtn.contains(e.target)) {
+                reviewPopup.classList.add("hidden");
+            }
+        });
+
+        if (closeReviewBtn) {
+            closeReviewBtn.addEventListener("click", function () {
+                reviewPopup.classList.add("hidden");
+            });
+        }
+    }
+
+  const userAvatarNav = document.getElementById("user-avatar-nav");
+    const userAvatarMenu = document.getElementById("userAvatarMenu");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (userAvatarNav && userAvatarMenu) {
+        userAvatarNav.addEventListener("click", function (e) {
+            e.stopPropagation();
+            userAvatarMenu.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", function () {
+            userAvatarMenu.classList.add("hidden");
+        });
+    }
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function () {
+            localStorage.clear();
+            window.location.href = "../登录/code.html";
+        });
+  }
+</script>
 </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
