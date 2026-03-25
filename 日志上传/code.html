@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>日志上传 - 智能日志分析系统</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space_Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline": "#777575",
+                        "tertiary-dim": "#d875f7",
+                        "surface-container-low": "#141313",
+                        "on-error": "#490013",
+                        "on-primary": "#64006c",
+                        "on-secondary-fixed": "#530081",
+                        "secondary-container": "#7b0fb9",
+                        "outline-variant": "#494847",
+                        "primary-container": "#df7be0",
+                        "background": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#62007f",
+                        "on-tertiary-fixed": "#2d003d",
+                        "tertiary-fixed-dim": "#de7afd",
+                        "inverse-on-surface": "#565554",
+                        "inverse-surface": "#fcf8f8",
+                        "on-primary-container": "#430048",
+                        "primary-fixed": "#fa93fa",
+                        "surface-container-lowest": "#000000",
+                        "on-primary-fixed": "#3f0044",
+                        "on-secondary-container": "#f2d5ff",
+                        "surface-container": "#1a1919",
+                        "surface-variant": "#262625",
+                        "error": "#ff6e84",
+                        "on-secondary": "#360056",
+                        "surface-tint": "#fa93fa",
+                        "surface-container-highest": "#262625",
+                        "secondary": "#ca7bff",
+                        "inverse-primary": "#943899",
+                        "error-container": "#a70138",
+                        "on-secondary-fixed-variant": "#7b10b9",
+                        "on-primary-fixed-variant": "#6f1076",
+                        "primary": "#fa93fa",
+                        "on-tertiary": "#54006e",
+                        "on-surface": "#ffffff",
+                        "on-tertiary-container": "#420057",
+                        "tertiary-fixed": "#e68fff",
+                        "tertiary": "#e68fff",
+                        "on-background": "#ffffff",
+                        "tertiary-container": "#de7afd",
+                        "secondary-fixed-dim": "#e2b1ff",
+                        "secondary-fixed": "#eac4ff",
+                        "primary-fixed-dim": "#eb86ec",
+                        "on-error-container": "#ffb2b9",
+                        "surface-bright": "#2d2c2c",
+                        "secondary-dim": "#ca7bff",
+                        "surface-container-high": "#201f1f",
+                        "primary-dim": "#eb86ec",
+                        "surface-dim": "#0e0e0e",
+                        "surface": "#0e0e0e",
+                        "error-dim": "#d73357",
+                        "on-surface-variant": "#adaaaa"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #010101; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #FA93FA 0%, #C967E8 50%, #983AD6 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #FA93FA, #C967E8, #983AD6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-body text-on-background selection:bg-primary/30">
+<!-- SideNavBar (Execution from JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#0e0e0e] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
+<div class="py-8 px-6">
+<h1 class="font-headline font-black text-white text-xl tracking-tight">智能日志分析系统</h1>
+<p class="font-label text-[10px] uppercase tracking-widest text-white/40 mt-1">Luminous Obsidian AI</p>
+</div>
+<nav class="flex flex-col px-4 space-y-2 mt-4">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../工作台/code.html" style="">
+<span class="material-symbols-outlined" data-icon="dashboard" style="">dashboard</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">工作台</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white/10 text-white border-r-4 border-[#C967E8] backdrop-blur-md transition-all duration-300" href="../日志上传/code.html" style="">
+<span class="material-symbols-outlined" data-icon="analytics" style="">analytics</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">日志分析</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../问题中心/code.html" style="">
+<span class="material-symbols-outlined" data-icon="biotech" style="">biotech</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">问题处理</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../历史日志存档/code.html" style="">
+<span class="material-symbols-outlined" data-icon="history_edu" style="">history_edu</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">历史与知识</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../规则配置管理/code.html" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">系统管理</span>
+</a>
+</nav>
+<div class="mt-auto px-6 py-8">
+<a class="w-full py-3 rounded-xl primary-gradient text-on-primary font-bold shadow-[0_0_20px_rgba(201,103,232,0.3)] hover:opacity-90 transition-opacity block text-center" href="../分析记录/code.html" style="">
+                进入分析记录
+            </a>
+</div>
+</aside>
+<!-- TopNavBar (Execution from JSON) -->
+<header class="fixed top-0 right-0 left-0 md:left-64 h-16 bg-white/5 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-8 z-50">
+<div class="flex items-center space-x-4">
+<span class="text-white/60 font-medium">工作台·日志分析</span>
+<span class="text-white/20">/</span>
+<span class="text-white font-bold">日志上传</span>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-white/40 text-sm">search</span>
+<input class="bg-white/5 border-none rounded-full pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-1 focus:ring-primary transition-all" placeholder="搜索数据..." type="text"/>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors">
+<span class="material-symbols-outlined">widgets</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30 cursor-pointer">
+<img alt="用户头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-12 pl-8 pr-8 md:pl-72 min-h-screen flex flex-col">
+<div class="max-w-6xl mx-auto w-full px-12 py-12 flex-1 flex flex-col">
+<!-- Header Section -->
+<section class="mb-12">
+<h1 class="text-4xl md:text-5xl font-extrabold font-headline tracking-tight text-white mb-4" style="">上传日志文件</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed" style="">支持 .log, .txt, .json 等常见格式，系统将自动识别并分析。</p>
+</section>
+<!-- Bento Upload Area -->
+<div class="grid grid-cols-1 gap-8 flex-1">
+<!-- Main Dropzone Card -->
+<div class="glass-panel rounded-3xl p-1 relative overflow-hidden flex flex-col items-center justify-center min-h-[400px] transition-all group hover:border-primary/40">
+<!-- Ambient Glow Effect -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[80px]"></div>
+<div class="w-full h-full border-2 border-dashed border-white/10 rounded-[22px] flex flex-col items-center justify-center p-8 transition-colors group-hover:bg-white/[0.02]">
+<div class="mb-6 w-20 h-20 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl text-gradient" data-icon="cloud_upload" style="font-variation-settings: &quot;FILL&quot; 1;">cloud_upload</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2" style="">点击或拖拽文件至此上传</h3>
+<p class="text-white/40 font-label tracking-widest text-xs uppercase mb-8" style="">Maximum file size: 500MB</p>
+<div class="flex gap-3">
+<span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-label text-white/60" style="">.LOG</span>
+<span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-label text-white/60" style="">.TXT</span>
+<span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-label text-white/60" style="">.JSON</span>
+<span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-label text-white/60" style="">.GZ</span>
+</div>
+</div>
+</div>
+<!-- File List / Progress Section -->
+<div class="space-y-4">
+<h4 class="text-sm font-label font-bold text-white/40 px-2 tracking-widest uppercase" style="">已选择的文件</h4>
+<!-- File Card 1 -->
+<div class="glass-panel rounded-2xl p-4 flex items-center gap-4 group transition-all hover:bg-white/5">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary" data-icon="description" style="">description</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="text-white font-medium" style="">server_access_log_20231024.log</span>
+<span class="text-xs font-label text-white/40" style="">124.5 MB</span>
+</div>
+<div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+<div class="primary-gradient h-full w-[65%] rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-primary font-bold" style="">65%</span>
+<button class="p-2 hover:text-error transition-colors" style="">
+<span class="material-symbols-outlined text-lg" data-icon="close" style="">close</span>
+</button>
+</div>
+</div>
+<!-- File Card 2 (Success State) -->
+<div class="glass-panel rounded-2xl p-4 flex items-center gap-4 group transition-all hover:bg-white/5">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary" data-icon="data_object" style="">data_object</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="text-white font-medium" style="">error_report_node_01.json</span>
+<span class="text-xs font-label text-white/40" style="">4.2 MB</span>
+</div>
+<div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-full rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-xl" data-icon="check_circle" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+<button class="p-2 hover:text-error transition-colors" style="">
+<span class="material-symbols-outlined text-lg" data-icon="delete" style="">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<footer class="mt-12 flex justify-end items-center gap-6">
+<span class="text-on-surface-variant text-sm flex items-center gap-2" style="">
+<span class="material-symbols-outlined text-sm" data-icon="info" style="">info</span>
+                    分析完成后结果将自动保存至历史记录
+                </span>
+<button class="px-8 py-4 rounded-xl bg-white text-black font-extrabold flex items-center gap-3 transition-all hover:scale-[1.02] active:scale-95 shadow-[0_10px_40px_rgba(255,255,255,0.1)]" id="start-analysis-btn" style="">
+                    开始分析
+                    <span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+</button>
+</footer>
+</div>
+</main>
+<!-- Visual Enhancements (Abstract Backgrounds) -->
+<div class="fixed top-0 right-0 -z-10 w-[600px] h-[600px] opacity-20 pointer-events-none">
+<img alt="" class="w-full h-full object-cover rounded-full blur-[120px]" data-alt="Soft pink and purple abstract light gradient" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm36cNwrHCBcV6Kn10GGkhn-wuuJAbkx3nWKLoRdUHMcC3RHyOZWoMmql9ynungW0gr57I3Y77OAt6T3Ajt48gjv8QxuKD80omdYAHr43OGnH8ZacH-iBJFWe6Jj5fssWyNOk9QV3_1I8c0HEyd0iiVxE3noccFbpu04WHHwS49QJak45ymsx_uGtYa4sa-idJC-pCMZoG_IJp1kA0lTQufkfowyQz73Iun0_huGcCffQG19z7yR80AQbpFfXzer6cu8H-n4zhSPSt" style="">
+</div>
+<div class="fixed bottom-0 left-64 -z-10 w-[400px] h-[400px] opacity-10 pointer-events-none">
+<img alt="" class="w-full h-full object-cover rounded-full blur-[100px]" data-alt="Deep violet ethereal energy pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt1EcxrxGl2sm86gyEthRaqUy64O_FsbRqDRdZqgn6b8o_x9S6cgfUmy1gXXD3C3V4sSWZznGvoW2rTBFL4_FJIFD-Mp8lDCyHtvgDE54rc6nsT8Qv9ijb_RrfHenWwLHpT867D0Ky5QDNq0_TiU-OPgfRSs0d7rGcIiZwF5qdUIIRqhqzEsTJu36SJh5fj1ZdClWGoRLuscHezOFjp3Kg_fEnQBG7oSACWjqBhHZpx5vpV8VY21idfC7Barv0hmAwjXqaZJS4JgLr" style="">
+</div>
+<script>
+            const startAnalysisBtn = document.getElementById("start-analysis-btn");
+            if (startAnalysisBtn) {
+                startAnalysisBtn.addEventListener("click", () => {
+                    startAnalysisBtn.disabled = true;
+                    startAnalysisBtn.classList.add("opacity-80", "cursor-not-allowed");
+                    startAnalysisBtn.innerHTML = '分析中...<span class="material-symbols-outlined" data-icon="hourglass_top" style="">hourglass_top</span>';
+                    setTimeout(() => {
+                        window.location.href = "../分析报告/code.html";
+                    }, 900);
+                });
+            }
+        </script>
+</body></html>

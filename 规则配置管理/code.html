@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>智能日志分析系统 - 规则管理</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space_Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#2d2c2c",
+                        "on-secondary-container": "#f2d5ff",
+                        "outline": "#777575",
+                        "on-error-container": "#ffb2b9",
+                        "on-error": "#490013",
+                        "surface-container-highest": "#262625",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-fixed": "#eac4ff",
+                        "primary-fixed": "#fa93fa",
+                        "on-tertiary-fixed": "#2d003d",
+                        "on-secondary-fixed": "#530081",
+                        "surface-tint": "#fa93fa",
+                        "primary": "#fa93fa",
+                        "error": "#ff6e84",
+                        "on-secondary": "#360056",
+                        "tertiary-fixed": "#e68fff",
+                        "tertiary-container": "#de7afd",
+                        "on-secondary-fixed-variant": "#7b10b9",
+                        "error-dim": "#d73357",
+                        "secondary-dim": "#ca7bff",
+                        "tertiary-fixed-dim": "#de7afd",
+                        "error-container": "#a70138",
+                        "primary-container": "#df7be0",
+                        "on-background": "#ffffff",
+                        "on-tertiary-fixed-variant": "#62007f",
+                        "on-surface-variant": "#adaaaa",
+                        "tertiary-dim": "#d875f7",
+                        "surface-container-low": "#141313",
+                        "on-primary-fixed": "#3f0044",
+                        "surface-dim": "#0e0e0e",
+                        "primary-dim": "#eb86ec",
+                        "outline-variant": "#494847",
+                        "on-primary": "#64006c",
+                        "inverse-on-surface": "#565554",
+                        "background": "#0e0e0e",
+                        "tertiary": "#e68fff",
+                        "secondary-fixed-dim": "#e2b1ff",
+                        "surface": "#0e0e0e",
+                        "surface-container-high": "#201f1f",
+                        "on-primary-fixed-variant": "#6f1076",
+                        "on-tertiary": "#54006e",
+                        "primary-fixed-dim": "#eb86ec",
+                        "on-primary-container": "#430048",
+                        "inverse-primary": "#943899",
+                        "surface-variant": "#262625",
+                        "secondary-container": "#7b0fb9",
+                        "on-surface": "#ffffff",
+                        "secondary": "#ca7bff",
+                        "surface-container": "#1a1919",
+                        "on-tertiary-container": "#420057",
+                        "surface-container-lowest": "#000000"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Space_Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .obsidian-card {
+            background: #1a1919;
+            transition: all 0.3s ease;
+        }
+        .obsidian-card:hover {
+            background: #201f1f;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary/30">
+<!-- Side Navigation -->
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#0e0e0e] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
+<div class="py-8 px-6">
+<h1 class="font-headline font-black text-white text-xl tracking-tight" style="">智能日志分析系统</h1>
+<p class="font-label text-[10px] uppercase tracking-widest text-white/40 mt-1" style="">Luminous Obsidian AI</p>
+</div>
+<nav class="flex flex-col px-4 space-y-2 mt-4">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../工作台/code.html" style="">
+<span class="material-symbols-outlined" style="">dashboard</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">工作台</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../日志上传/code.html" style="">
+<span class="material-symbols-outlined" style="">analytics</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">日志分析</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../问题中心/code.html" style="">
+<span class="material-symbols-outlined" style="">biotech</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">问题处理</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../历史日志存档/code.html" style="">
+<span class="material-symbols-outlined" style="">history_edu</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">历史与知识</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white/10 text-white border-r-4 border-[#C967E8] backdrop-blur-md transition-all duration-300" href="../规则配置管理/code.html" style="">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'">settings_suggest</span>
+<span class="font-label text-sm uppercase tracking-widest" style="">系统管理</span>
+</a>
+</nav>
+<div class="mt-auto px-6 py-8">
+<button class="w-full py-3 rounded-xl bg-gradient-to-r from-[#FA93FA] via-[#C967E8] to-[#983AD6] text-on-primary font-bold text-sm shadow-lg active:scale-95 transition-transform" style="">开始新分析</button>
+<div class="mt-6 flex flex-col space-y-3">
+<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#" style="">
+<span class="material-symbols-outlined text-sm" style="">help</span>
+<span class="" style="">帮助中心</span>
+</a>
+<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#" style="">
+<span class="material-symbols-outlined text-sm" style="">description</span>
+<span class="" style="">技术文档</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="pt-24 pb-12 pl-8 pr-8 md:pl-72 min-h-screen">
+<header class="fixed top-0 right-0 left-0 md:left-64 h-16 bg-white/5 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-8 z-50">
+<div class="flex items-center space-x-4">
+<span class="text-white/60 font-medium">工作台·系统管理</span>
+<span class="text-white/20">/</span>
+<span class="text-white font-bold">规则配置管理</span>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-white/40 text-sm">search</span>
+<input class="bg-white/5 border-none rounded-full pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-1 focus:ring-primary transition-all" placeholder="搜索数据..." type="text"/>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors">
+<span class="material-symbols-outlined">widgets</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30 cursor-pointer">
+<img alt="用户头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-10">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-headline font-extrabold tracking-tight mb-2">规则配置管理</h2>
+<p class="text-white/50 text-sm leading-relaxed">规则来源于用户使用中未被系统覆盖的问题，经人工复核沉淀到知识库后，在多次复现时转化为可执行规则。</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all font-label text-xs uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="filter_list">filter_list</span>
+                        过滤条件
+                    </button>
+<button class="px-6 py-2.5 rounded-lg bg-gradient-to-r from-[#FA93FA] to-[#C967E8] text-on-primary font-bold shadow-[0_8px_20px_-4px_rgba(250,147,250,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all font-label text-xs uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="add_circle">add_circle</span>
+                        新增规则
+                    </button>
+</div>
+</div>
+
+<section class="mb-8 sticky top-20 z-20 glass-panel rounded-2xl border border-white/10 p-4">
+<div class="flex items-center justify-between mb-3">
+<p class="text-[10px] font-label uppercase tracking-widest text-white/40">系统管理自由切换</p>
+<span class="text-[10px] text-white/30">在三个页面之间快速跳转</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<a class="px-4 py-3 rounded-xl bg-gradient-to-r from-[#FA93FA]/25 to-transparent text-[#FA93FA] border border-[#FA93FA]/30 text-sm font-bold text-center" href="../规则配置管理/code.html">规则配置（当前）</a>
+<a class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-white/20 transition-all text-sm font-medium text-center" href="../性能分析/code.html">性能分析</a>
+<a class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-white/20 transition-all text-sm font-medium text-center" href="../系统设置/code.html">系统设置</a>
+</div>
+</section>
+
+<div class="mb-8 glass-panel rounded-2xl border border-white/10 p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+<p class="text-xs text-white/70 leading-relaxed">沉淀链路：用户遇到系统未覆盖问题 -> 人工复核确认 -> 知识库沉淀 -> 高频复现写入规则库。</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold text-primary hover:text-white transition-colors" href="../历史问题库/code.html">
+<span class="material-symbols-outlined text-sm">schema</span>
+<span>查看沉淀来源</span>
+</a>
+</div>
+
+<!-- Stats & Filters Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+<div class="glass-panel p-6 rounded-2xl border border-white/5 obsidian-card">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="rule">rule</span>
+<span class="text-[10px] font-label text-white/30 tracking-widest uppercase">总计</span>
+</div>
+<div class="text-3xl font-headline font-bold">1,248</div>
+<div class="text-xs text-white/40 mt-1">当前激活规则总数</div>
+</div>
+<div class="glass-panel p-6 rounded-2xl border border-white/5 obsidian-card">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-green-400" data-icon="check_circle">check_circle</span>
+<span class="text-[10px] font-label text-white/30 tracking-widest uppercase">启用</span>
+</div>
+<div class="text-3xl font-headline font-bold">1,102</div>
+<div class="text-xs text-white/40 mt-1">正在运行中</div>
+</div>
+<div class="glass-panel p-6 rounded-2xl border border-white/5 obsidian-card">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-orange-400" data-icon="warning">warning</span>
+<span class="text-[10px] font-label text-white/30 tracking-widest uppercase">警报</span>
+</div>
+<div class="text-3xl font-headline font-bold">12</div>
+<div class="text-xs text-white/40 mt-1">规则逻辑报错</div>
+</div>
+<div class="glass-panel p-6 rounded-2xl border border-white/5 obsidian-card">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-yellow-400" data-icon="pause_circle">pause_circle</span>
+<span class="text-[10px] font-label text-white/30 tracking-widest uppercase">暂停</span>
+</div>
+<div class="text-3xl font-headline font-bold">134</div>
+<div class="text-xs text-white/40 mt-1">已手动停用</div>
+</div>
+</div>
+<!-- Rules Table Content -->
+<div class="glass-panel rounded-2xl border border-white/5 overflow-hidden">
+<!-- Table Header/Filter Bar -->
+<div class="px-8 py-5 border-b border-white/5 flex items-center justify-between bg-white/5">
+<div class="flex gap-8">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] font-label text-white/30 uppercase tracking-widest">规则类型</span>
+<select class="bg-transparent border-none text-sm font-semibold p-0 focus:ring-0 cursor-pointer hover:text-primary transition-colors">
+<option class="bg-[#1a1919]">全部类型</option>
+<option class="bg-[#1a1919]">正则匹配</option>
+<option class="bg-[#1a1919]">AI 语义</option>
+<option class="bg-[#1a1919]">关键词</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-[10px] font-label text-white/30 uppercase tracking-widest">运行状态</span>
+<select class="bg-transparent border-none text-sm font-semibold p-0 focus:ring-0 cursor-pointer hover:text-primary transition-colors">
+<option class="bg-[#1a1919]">全部状态</option>
+<option class="bg-[#1a1919]">已启用</option>
+<option class="bg-[#1a1919]">已停用</option>
+<option class="bg-[#1a1919]">报错中</option>
+</select>
+</div>
+</div>
+<span class="text-xs text-white/30 italic">显示 1-10 条，共 1,248 条记录</span>
+</div>
+<!-- Table Body -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-[10px] font-label uppercase tracking-widest text-white/40 border-b border-white/5">
+<th class="px-8 py-4 font-medium">规则名称与 ID</th>
+<th class="px-6 py-4 font-medium">类型</th>
+<th class="px-6 py-4 font-medium">描述</th>
+<th class="px-6 py-4 font-medium">最后更新</th>
+<th class="px-6 py-4 font-medium">运行状态</th>
+<th class="px-8 py-4 font-medium text-right">操作</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<!-- Row 1: Active -->
+<tr class="group hover:bg-white/[0.02] transition-colors">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="font-bold text-white group-hover:text-primary transition-colors">Critical_System_Overflow</span>
+<span class="text-[10px] font-label text-white/30">RULE-8829-X</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="px-2 py-1 rounded bg-blue-500/10 text-blue-400 text-[10px] font-label border border-blue-500/20">正则匹配</span>
+</td>
+<td class="px-6 py-6">
+<p class="text-sm text-white/60 line-clamp-1 max-w-xs">监控核心数据库连接池溢出风险，触发阈值 85%。</p>
+</td>
+<td class="px-6 py-6 text-sm text-white/40">2023-11-24 14:20</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-9 h-5 bg-green-500/20 border border-green-500/30 rounded-full"></div>
+<div class="absolute left-1 top-1 w-3 h-3 bg-green-400 rounded-full shadow-[0_0_8px_#4ade80]"></div>
+</div>
+<span class="text-xs text-green-400 font-medium">已启用</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-3 text-white/40">
+<button class="hover:text-white transition-colors"><span class="material-symbols-outlined text-lg" data-icon="edit">edit</span></button>
+<button class="hover:text-white transition-colors"><span class="material-symbols-outlined text-lg" data-icon="content_copy">content_copy</span></button>
+<button class="hover:text-error transition-colors"><span class="material-symbols-outlined text-lg" data-icon="delete">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Paused -->
+<tr class="group hover:bg-white/[0.02] transition-colors">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="font-bold text-white group-hover:text-primary transition-colors">User_Login_Anomaly_Detection</span>
+<span class="text-[10px] font-label text-white/30">RULE-4122-A</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="px-2 py-1 rounded bg-purple-500/10 text-purple-400 text-[10px] font-label border border-purple-500/20">AI 语义</span>
+</td>
+<td class="px-6 py-6">
+<p class="text-sm text-white/60 line-clamp-1 max-w-xs">识别短时间内多次异地登录的异常行为模式。</p>
+</td>
+<td class="px-6 py-6 text-sm text-white/40">2023-11-22 09:15</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-9 h-5 bg-yellow-500/10 border border-yellow-500/20 rounded-full"></div>
+<div class="absolute right-1 top-1 w-3 h-3 bg-yellow-400/50 rounded-full"></div>
+</div>
+<span class="text-xs text-yellow-400 font-medium">已停用</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-3 text-white/40">
+<button class="hover:text-white transition-colors"><span class="material-symbols-outlined text-lg" data-icon="edit">edit</span></button>
+<button class="hover:text-white transition-colors"><span class="material-symbols-outlined text-lg" data-icon="content_copy">content_copy</span></button>
+<button class="hover:text-error transition-colors"><span class="material-symbols-outlined text-lg" data-icon="delete">delete</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Error -->
+<tr class="group hover:bg-white/[0.02] transition-colors">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="font-bold text-white group-hover:text-primary transition-colors">Legacy_API_Deprecated_Watch</span>
+<span class="text-[10px] font-label text-white/30">RULE-1004-E</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="px-2 py-1 rounded bg-gray-500/10 text-gray-400 text-[10px] font-label border border-gray-500/20">关键词</span>
+</td>
+<td class="px-6 py-6">
+<p class="text-sm text-white/60 line-clamp-1 max-w-xs">检测调用已弃用 v1.0 接口的请求头特征。</p>
+</td>
+<td class="px-6 py-6 text-sm text-white/40">2023-11-20 18:44</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-9 h-5 bg-orange-500/20 border border-orange-500/30 rounded-full"></div>
+<div class="absolute left-1 top-1 w-3 h-3 bg-orange-500 rounded-full shadow-[0_0_8px_#f97316]"></div>
+</div>
+<span class="text-xs text-orange-400 font-medium">报错中</span>
+</div>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-3 text-white/40">
+<button class="hover:text-white transition-colors"><span class="material-symbols-outlined text-lg" data-icon="info">info</span></button>
+<button class="hover:text-white transition-colors"><span class="material-symbols-outlined text-lg" data-icon="edit">edit</span></button>
+<button class="hover:text-error transition-colors"><span class="material-symbols-outlined text-lg" data-icon="delete">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-8 py-6 flex items-center justify-between border-t border-white/5 bg-white/[0.01]">
+<div class="flex gap-2">
+<button class="h-8 w-8 flex items-center justify-center rounded border border-white/10 hover:bg-white/5 disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="h-8 w-8 flex items-center justify-center rounded bg-primary text-on-primary font-bold text-xs">1</button>
+<button class="h-8 w-8 flex items-center justify-center rounded border border-white/10 hover:bg-white/5 text-xs">2</button>
+<button class="h-8 w-8 flex items-center justify-center rounded border border-white/10 hover:bg-white/5 text-xs">3</button>
+<span class="h-8 w-8 flex items-center justify-center text-white/30 text-xs">...</span>
+<button class="h-8 w-8 flex items-center justify-center rounded border border-white/10 hover:bg-white/5 text-xs">125</button>
+<button class="h-8 w-8 flex items-center justify-center rounded border border-white/10 hover:bg-white/5">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="text-xs font-label text-white/40 uppercase tracking-widest flex items-center gap-4">
+<span>跳至</span>
+<input class="w-12 h-8 bg-white/5 border border-white/10 rounded text-center text-white" type="text" value="1"/>
+<span>页</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="h-14 w-14 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_12px_24px_-8px_rgba(250,147,250,0.6)] group hover:scale-110 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-white text-2xl" data-icon="auto_fix_high" style="font-variation-settings: 'FILL' 1;">auto_fix_high</span>
+<div class="absolute right-16 px-4 py-2 bg-[#1a1919] text-xs font-label text-white uppercase tracking-widest rounded-lg border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                AI 规则优化建议
+            </div>
+</button>
+</div>
+
+<div class="hidden fixed top-20 right-8 z-[80] w-80 rounded-2xl border border-primary/30 bg-[#141313]/95 backdrop-blur-xl p-4 shadow-[0_12px_30px_rgba(0,0,0,0.45)]" id="reviewAlertPopup">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">notification_important</span>
+<div class="flex-1">
+<p class="text-sm font-bold text-white">人工复核提醒</p>
+<p class="text-xs text-white/70 mt-1" id="reviewAlertText">有新的待复核问题</p>
+<div class="mt-3 flex items-center gap-2">
+<a class="px-3 py-1.5 rounded-lg bg-primary/20 text-primary text-xs font-bold hover:bg-primary/30 transition-all" href="../人工复核/code.html">去处理</a>
+<button class="px-3 py-1.5 rounded-lg bg-white/10 text-white/70 text-xs hover:bg-white/20 transition-all" id="closeReviewAlertBtn">稍后</button>
+ </div>
+ </div>
+ </div>
+</div>
+
+<script>
+    (function () {
+        const pendingReviewCount = Number(localStorage.getItem("pendingHumanReviewCount") || "2");
+        const bellBtn = document.getElementById("notificationBellBtn");
+        const bellBadge = document.getElementById("notificationBellBadge");
+        const popup = document.getElementById("reviewAlertPopup");
+        const closeBtn = document.getElementById("closeReviewAlertBtn");
+        const alertText = document.getElementById("reviewAlertText");
+
+        if (!bellBtn || !bellBadge || !popup || !closeBtn || !alertText) {
+            return;
+        }
+
+        if (pendingReviewCount > 0) {
+            bellBadge.textContent = pendingReviewCount > 99 ? "99+" : String(pendingReviewCount);
+            bellBadge.classList.remove("hidden");
+            alertText.textContent = "当前有 " + pendingReviewCount + " 条问题需要人工复核";
+            setTimeout(function () {
+                popup.classList.remove("hidden");
+            }, 700);
+        }
+
+        bellBtn.addEventListener("click", function () {
+            if (pendingReviewCount <= 0) {
+                return;
+            }
+            popup.classList.toggle("hidden");
+        });
+
+        closeBtn.addEventListener("click", function () {
+            popup.classList.add("hidden");
+        });
+    })();
+</script>
+</body></html>

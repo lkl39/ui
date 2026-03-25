@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>历史问题库 - 智能日志分析系统</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space_Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#de7afd",
+                        "on-surface": "#ffffff",
+                        "on-error": "#490013",
+                        "outline-variant": "#494847",
+                        "surface-dim": "#0e0e0e",
+                        "primary-container": "#df7be0",
+                        "secondary": "#ca7bff",
+                        "inverse-primary": "#943899",
+                        "error-dim": "#d73357",
+                        "primary-fixed": "#fa93fa",
+                        "inverse-on-surface": "#565554",
+                        "error-container": "#a70138",
+                        "on-tertiary-fixed": "#2d003d",
+                        "secondary-container": "#7b0fb9",
+                        "surface-container-highest": "#262625",
+                        "tertiary-fixed-dim": "#de7afd",
+                        "surface-container-high": "#201f1f",
+                        "primary": "#fa93fa",
+                        "surface-bright": "#2d2c2c",
+                        "on-error-container": "#ffb2b9",
+                        "surface-tint": "#fa93fa",
+                        "surface": "#0e0e0e",
+                        "on-secondary-fixed": "#530081",
+                        "on-background": "#ffffff",
+                        "surface-container-lowest": "#000000",
+                        "secondary-dim": "#ca7bff",
+                        "on-primary-fixed": "#3f0044",
+                        "surface-container": "#1a1919",
+                        "primary-fixed-dim": "#eb86ec",
+                        "on-secondary-container": "#f2d5ff",
+                        "primary-dim": "#eb86ec",
+                        "tertiary": "#e68fff",
+                        "on-secondary": "#360056",
+                        "on-tertiary-container": "#420057",
+                        "on-primary": "#64006c",
+                        "secondary-fixed": "#eac4ff",
+                        "on-surface-variant": "#adaaaa",
+                        "on-primary-fixed-variant": "#6f1076",
+                        "secondary-fixed-dim": "#e2b1ff",
+                        "surface-variant": "#262625",
+                        "tertiary-dim": "#d875f7",
+                        "tertiary-fixed": "#e68fff",
+                        "outline": "#777575",
+                        "on-tertiary": "#54006e",
+                        "on-secondary-fixed-variant": "#7b10b9",
+                        "on-tertiary-fixed-variant": "#62007f",
+                        "on-primary-container": "#430048",
+                        "inverse-surface": "#fcf8f8",
+                        "surface-container-low": "#141313",
+                        "error": "#ff6e84",
+                        "background": "#0e0e0e"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #FA93FA, #C967E8, #983AD6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(250, 147, 250, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen overflow-hidden">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-[#0e0e0e] shadow-[4px_0_24px_rgba(0,0,0,0.5)] z-[60] hidden md:flex border-r border-white/5">
+<div class="py-8 px-6">
+<h1 class="font-headline font-black text-white text-xl tracking-tight">智能日志分析系统</h1>
+<p class="font-label text-[10px] uppercase tracking-widest text-white/40 mt-1">Luminous Obsidian AI</p>
+</div>
+<nav class="flex flex-col px-4 space-y-2 mt-4">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../工作台/code.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label text-sm uppercase tracking-widest">工作台</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../日志上传/code.html">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 0;'>analytics</span>
+<span class="font-label text-sm uppercase tracking-widest">日志分析</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../问题中心/code.html">
+<span class="material-symbols-outlined">biotech</span>
+<span class="font-label text-sm uppercase tracking-widest">问题处理</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-white/10 text-white border-r-4 border-[#C967E8] backdrop-blur-md transition-all duration-300" href="../历史问题库/code.html">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>history_edu</span>
+<span class="font-label text-sm uppercase tracking-widest">历史与知识</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-white/40 hover:text-white/80 hover:bg-white/5 transition-all duration-200" href="../规则配置管理/code.html">
+<span class="material-symbols-outlined">settings_suggest</span>
+<span class="font-label text-sm uppercase tracking-widest">系统管理</span>
+</a>
+</nav>
+<div class="mt-auto px-6 py-8">
+<button class="w-full py-3 rounded-xl bg-gradient-to-r from-[#FA93FA] via-[#C967E8] to-[#983AD6] text-on-primary font-bold text-sm shadow-lg active:scale-95 transition-transform mb-6">查看复盘</button>
+<div class="flex flex-col space-y-3">
+<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+<span>帮助中心</span>
+</a>
+<a class="flex items-center space-x-2 text-white/40 hover:text-white transition-colors text-xs font-label uppercase" href="#">
+<span class="material-symbols-outlined text-sm">description</span>
+<span>技术文档</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<!-- Top Navigation -->
+<header class="fixed top-0 right-0 left-0 md:left-64 h-16 bg-white/5 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-8 z-50">
+<div class="flex items-center space-x-4">
+<span class="text-white/60 font-medium">工作台·历史与知识</span>
+<span class="text-white/20">/</span>
+<span class="text-white font-bold">历史问题库</span>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-white/40 text-sm">search</span>
+<input class="bg-white/5 border-none rounded-full pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-1 focus:ring-primary transition-all" placeholder="搜索数据..." type="text"/>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors">
+<span class="material-symbols-outlined">widgets</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/5 text-white/70 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30 cursor-pointer">
+<img alt="用户头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxvORuVmDZYtE3NianxBmhqHDFlGNIQhdZaqZ_kbEerzfm0VSKHRDubmhDXWaVMlCoOYwSlME0BUwmf3xOvEA1sEj9k6LSzdUYTH0Ze8qq-gB3DT9DWUgGwO4_CUQLgPmStaJdcwhx3uYoBnNSs3kUGyyXnbxSkvcMfsAyjAtve3hUy_oeuD8obins_oVGZu2e9zS8UUjFQPIk1A4Nj88k3eBH7RQQHbsm655peIBdiMt9GUOD3PEDbj_DnwHD2cXDOtQ3gaDjJXA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-12 pl-8 pr-8 md:pl-72 min-h-screen">
+<!-- Page Header -->
+<div class="mb-10 flex justify-between items-end">
+<div>
+<h2 class="font-headline text-4xl font-extrabold tracking-tight text-white mb-2">历史问题库</h2>
+<p class="font-body text-white/50 max-w-lg">聚合已关闭问题的历史复盘记录，支持按归档状态、风险和根因路径检索，沉淀可复用经验。</p>
+</div>
+<div class="flex gap-2">
+<button class="bg-white/5 hover:bg-white/10 text-white/80 px-4 py-2 rounded-lg border border-white/5 font-label text-xs flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="export_notes">export_notes</span>
+                        导出报表
+                    </button>
+</div>
+</div>
+
+<section class="mb-8 sticky top-20 z-20 glass-panel rounded-2xl border border-white/10 p-4">
+<div class="flex items-center justify-between mb-3">
+<p class="text-[10px] font-label uppercase tracking-widest text-white/40">历史与知识自由切换</p>
+<span class="text-[10px] text-white/30">在三个页面之间快速跳转</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<a class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-white/20 transition-all text-sm font-medium text-center" href="../历史日志存档/code.html">历史日志存档</a>
+<a class="px-4 py-3 rounded-xl bg-gradient-to-r from-[#FA93FA]/25 to-transparent text-[#FA93FA] border border-[#FA93FA]/30 text-sm font-bold text-center" href="../历史问题库/code.html">历史问题库（当前）</a>
+<a class="px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-white/20 transition-all text-sm font-medium text-center" href="../探索根因知识库/code.html">探索根因知识库</a>
+</div>
+</section>
+
+<!-- Advanced Filter Bar -->
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
+<div class="bg-surface-container rounded-xl p-4 flex flex-col gap-2">
+<label class="font-label text-[10px] text-white/40 uppercase tracking-widest">风险等级</label>
+<select class="bg-transparent border-none text-white text-sm p-0 focus:ring-0 cursor-pointer">
+<option value="all">全部级别</option>
+<option value="high">高风险 (高亮橙)</option>
+<option value="mid">中风险 (亮黄)</option>
+<option value="low">低风险 (绿色)</option>
+</select>
+</div>
+<div class="bg-surface-container rounded-xl p-4 flex flex-col gap-2">
+<label class="font-label text-[10px] text-white/40 uppercase tracking-widest">问题类型</label>
+<select class="bg-transparent border-none text-white text-sm p-0 focus:ring-0 cursor-pointer">
+<option value="all">全部类型</option>
+<option value="runtime">运行异常</option>
+<option value="network">网络超时</option>
+<option value="security">安全威胁</option>
+</select>
+</div>
+<div class="bg-surface-container rounded-xl p-4 flex flex-col gap-2">
+<label class="font-label text-[10px] text-white/40 uppercase tracking-widest">归档状态</label>
+<select class="bg-transparent border-none text-white text-sm p-0 focus:ring-0 cursor-pointer">
+<option value="all">全部状态</option>
+<option value="archived">已归档</option>
+<option value="reviewed">已复盘</option>
+<option value="pending">待沉淀</option>
+</select>
+</div>
+<div class="bg-surface-container rounded-xl p-4 flex flex-col gap-2 md:col-span-1 lg:col-span-2">
+<label class="font-label text-[10px] text-white/40 uppercase tracking-widest">关键词搜索</label>
+<div class="flex items-center gap-2">
+<input class="bg-transparent border-none text-white text-sm p-0 focus:ring-0 w-full placeholder:text-white/20" placeholder="输入错误代码或日志摘要..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Table Section (Bento Inspired Glass Table) -->
+<div class="bg-surface-container rounded-2xl overflow-hidden border border-white/5">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-white/5 border-b border-white/5">
+<th class="px-6 py-4 font-label text-[10px] text-white/40 uppercase tracking-widest font-medium">问题名称</th>
+<th class="px-6 py-4 font-label text-[10px] text-white/40 uppercase tracking-widest font-medium">来源日志</th>
+<th class="px-6 py-4 font-label text-[10px] text-white/40 uppercase tracking-widest font-medium">异常类型</th>
+<th class="px-6 py-4 font-label text-[10px] text-white/40 uppercase tracking-widest font-medium">风险等级</th>
+<th class="px-6 py-4 font-label text-[10px] text-white/40 uppercase tracking-widest font-medium">归档状态</th>
+<th class="px-6 py-4 font-label text-[10px] text-white/40 uppercase tracking-widest font-medium text-right">归档时间</th>
+<th class="px-6 py-4 font-label text-[10px] text-white/40 uppercase tracking-widest font-medium text-center">操作</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<!-- High Risk Entry -->
+<tr class="group hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-white font-medium text-sm">Auth-Service 响应延迟异常</span>
+<span class="text-[10px] text-white/30 font-label">ID: ERR-2023-0824</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="bg-white/5 text-white/70 px-2 py-1 rounded text-[10px] font-label">prod-auth-log-01</span>
+</td>
+<td class="px-6 py-5">
+<span class="text-white/80 text-xs">Runtime Error</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_8px_#f97316]"></div>
+<span class="text-orange-500 text-[10px] font-bold uppercase">高风险</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-primary/10 border border-primary/20">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="check_circle">check_circle</span>
+<span class="text-primary text-[10px] font-bold">已归档</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right font-label text-[10px] text-white/40">
+                                2023-11-20 14:30
+                            </td>
+<td class="px-6 py-5 text-center">
+<button class="text-[#FA93FA] hover:underline text-xs font-medium">查看复盘</button>
+</td>
+</tr>
+<!-- Mid Risk Entry -->
+<tr class="group hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-white font-medium text-sm">数据库连接池水位预警</span>
+<span class="text-[10px] text-white/30 font-label">ID: WARN-2023-1102</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="bg-white/5 text-white/70 px-2 py-1 rounded text-[10px] font-label">db-master-metric</span>
+</td>
+<td class="px-6 py-5">
+<span class="text-white/80 text-xs">Resource Alert</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-yellow-400 shadow-[0_0_8px_#facc15]"></div>
+<span class="text-yellow-400 text-[10px] font-bold uppercase">中风险</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-[14px] text-white/40" data-icon="visibility">visibility</span>
+<span class="text-white/60 text-[10px] font-bold">待沉淀</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right font-label text-[10px] text-white/40">
+                                2023-11-19 09:15
+                            </td>
+<td class="px-6 py-5 text-center">
+<button class="text-[#FA93FA] hover:underline text-xs font-medium">查看复盘</button>
+</td>
+</tr>
+<!-- Low Risk Entry -->
+<tr class="group hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-white font-medium text-sm">静态资源加载超时 (CDN)</span>
+<span class="text-[10px] text-white/30 font-label">ID: INFO-2023-0901</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="bg-white/5 text-white/70 px-2 py-1 rounded text-[10px] font-label">cdn-edge-log</span>
+</td>
+<td class="px-6 py-5">
+<span class="text-white/80 text-xs">Network Delay</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]"></div>
+<span class="text-emerald-500 text-[10px] font-bold uppercase">低风险</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-white/5 border border-white/10 opacity-60">
+<span class="material-symbols-outlined text-[14px] text-white/40" data-icon="block">block</span>
+<span class="text-white/40 text-[10px] font-bold">已归档</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right font-label text-[10px] text-white/40">
+                                2023-11-18 18:45
+                            </td>
+<td class="px-6 py-5 text-center">
+<button class="text-[#FA93FA] hover:underline text-xs font-medium">查看复盘</button>
+</td>
+</tr>
+<!-- Repeat for UI density -->
+<tr class="group hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-white font-medium text-sm">Redis 缓存穿透突发</span>
+<span class="text-[10px] text-white/30 font-label">ID: ERR-2023-0825</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="bg-white/5 text-white/70 px-2 py-1 rounded text-[10px] font-label">cache-node-04</span>
+</td>
+<td class="px-6 py-5">
+<span class="text-white/80 text-xs">Security Threat</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_8px_#f97316]"></div>
+<span class="text-orange-500 text-[10px] font-bold uppercase">高风险</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-primary/10 border border-primary/20">
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="check_circle">check_circle</span>
+<span class="text-primary text-[10px] font-bold">已复盘</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right font-label text-[10px] text-white/40">
+                                2023-11-15 11:20
+                            </td>
+<td class="px-6 py-5 text-center">
+<button class="text-[#FA93FA] hover:underline text-xs font-medium">查看复盘</button>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination -->
+<div class="p-6 border-t border-white/5 flex items-center justify-between">
+<span class="font-label text-[10px] text-white/30 tracking-widest uppercase">显示 1-15 条，共 1240 条历史复盘记录</span>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-white/5 text-white/40 hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary text-on-primary text-[10px] font-bold">1</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-white/5 text-white/60 hover:bg-white/10 text-[10px] font-bold">2</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-white/5 text-white/60 hover:bg-white/10 text-[10px] font-bold">3</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-white/5 text-white/40 hover:bg-white/10 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Knowledge Base Teaser (Secondary Element) -->
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-panel p-6 rounded-2xl border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary/10 transition-all"></div>
+<span class="material-symbols-outlined text-primary mb-4" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="text-white font-bold mb-2">智能修复建议</h3>
+<p class="text-white/40 text-xs leading-relaxed">系统已根据历史复盘记录，为高频问题生成了自动化处置建议和复用模板。</p>
+<a class="mt-4 inline-flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-widest" href="#">
+                        查看复盘
+                        <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="glass-panel p-6 rounded-2xl border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-secondary/10 transition-all"></div>
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="book">book</span>
+<h3 class="text-white font-bold mb-2">知识沉淀分析</h3>
+<p class="text-white/40 text-xs leading-relaxed">本月共沉淀 12 条有效知识条目，主要集中在 Redis 故障排查与 JVM 调优。</p>
+<a class="mt-4 inline-flex items-center gap-2 text-secondary text-xs font-bold uppercase tracking-widest" href="#">
+                        进入知识库
+                        <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="glass-panel p-6 rounded-2xl border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-white/10 transition-all"></div>
+<span class="material-symbols-outlined text-white/60 mb-4" data-icon="monitoring">monitoring</span>
+<h3 class="text-white font-bold mb-2">趋势回溯</h3>
+<p class="text-white/40 text-xs leading-relaxed">与上月相比，系统的高风险异常频率下降了 22%，MTTR 缩短了 15 分钟。</p>
+<a class="mt-4 inline-flex items-center gap-2 text-white/60 text-xs font-bold uppercase tracking-widest" href="#">
+                        查看趋势图
+                        <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+</body></html>

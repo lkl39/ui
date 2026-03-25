@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>首页 - 智能日志分析粻统</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary-container": "#de7afd",
+                "on-error-container": "#ffb2b9",
+                "on-tertiary-fixed": "#2d003d",
+                "tertiary": "#e68fff",
+                "inverse-primary": "#943899",
+                "on-tertiary": "#54006e",
+                "secondary-container": "#7b0fb9",
+                "surface-container-high": "#201f1f",
+                "error": "#ff6e84",
+                "primary-dim": "#eb86ec",
+                "on-background": "#ffffff",
+                "outline": "#777575",
+                "on-primary-container": "#430048",
+                "surface-container-low": "#141313",
+                "on-primary": "#64006c",
+                "secondary-fixed": "#eac4ff",
+                "tertiary-fixed": "#e68fff",
+                "on-secondary-fixed-variant": "#7b10b9",
+                "primary": "#fa93fa",
+                "primary-container": "#df7be0",
+                "surface-container-lowest": "#000000",
+                "on-surface-variant": "#adaaaa",
+                "on-error": "#490013",
+                "on-tertiary-container": "#420057",
+                "surface": "#0e0e0e",
+                "on-secondary-container": "#f2d5ff",
+                "inverse-surface": "#fcf8f8",
+                "on-primary-fixed-variant": "#6f1076",
+                "on-tertiary-fixed-variant": "#62007f",
+                "surface-container": "#1a1919",
+                "tertiary-fixed-dim": "#de7afd",
+                "surface-container-highest": "#262625",
+                "error-container": "#a70138",
+                "surface-tint": "#fa93fa",
+                "on-secondary-fixed": "#530081",
+                "outline-variant": "#494847",
+                "surface-dim": "#0e0e0e",
+                "error-dim": "#d73357",
+                "on-primary-fixed": "#3f0044",
+                "surface-bright": "#2d2c2c",
+                "primary-fixed-dim": "#eb86ec",
+                "surface-variant": "#262625",
+                "on-surface": "#ffffff",
+                "primary-fixed": "#fa93fa",
+                "secondary": "#ca7bff",
+                "secondary-fixed-dim": "#e2b1ff",
+                "background": "#0e0e0e",
+                "secondary-dim": "#ca7bff",
+                "inverse-on-surface": "#565554",
+                "tertiary-dim": "#d875f7",
+                "on-secondary": "#360056"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #010101;
+            color: white;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #fa93fa, #c967e8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .primary-gradient-bg {
+            background: linear-gradient(135deg, #fa93fa 0%, #c967e8 50%, #983ad6 100%);
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 30s linear infinite;
+        }
+        .mask-fade-side {
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-xl shadow-[0_32px_64px_rgba(255,255,255,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-white uppercase font-headline flex items-center" style=""><span class="material-symbols-outlined text-primary mr-2 align-middle" style='font-variation-settings: "FILL" 1; font-size: 24px;'>bolt</span>智能日志分析系统</div>
+<div class="hidden md:flex items-center gap-8 font-label text-sm uppercase tracking-widest"><span class="text-white/50">演示版本</span></div>
+<div class="flex items-center gap-4">
+<a class="bg-white/5 hover:bg-white/10 transition-all duration-300 px-6 py-2 rounded-lg font-label text-xs uppercase tracking-wider text-primary border border-white/10 active:scale-95 inline-block" href="../登录/code.html" style="">登录/注册</a>
+<button class="md:hidden text-white active:scale-95 duration-200" style="">
+<span class="material-symbols-outlined" style="">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="relative pt-32">
+<!-- Hero Section -->
+<section class="relative z-20 max-w-5xl mx-auto px-6 text-center pb-24">
+<!-- Announcement Pill -->
+<div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-panel border border-white/5 mb-8 hover:bg-white/10 transition-colors cursor-default">
+<span class="font-label text-xs uppercase tracking-[0.15em] text-on-surface-variant" style=""><br/></span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-headline font-extrabold text-[48px] md:text-[80px] leading-[1.1] tracking-tight mb-6" style="">
+<span class="block text-white" style="">您的愿景</span>
+<span class="text-gradient" style="">我们的数字现实</span></h1>
+<!-- Subheadline -->
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-white/80 font-body mb-10 leading-relaxed" style="">从海量日志中挖掘价值，在复杂系统里精准排障。<div style='color: rgb(0, 0, 0); font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 16px; line-height: 24px; text-align: start; flex: 0 1 auto; flex-direction: row; justify-content: normal; align-items: normal; padding: 0px; margin: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);'></div>实时监控、智能分析、可视化决策，让运维更简单，让系统更可靠。</p><div class="" style="--tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;"><br/></div><p class="" style=""></p><div class="mt-12 flex justify-center">
+<div class="p-[1px] rounded-full bg-gradient-to-r from-white/20 to-transparent">
+<button class="bg-white hover:bg-white/90 text-black px-10 py-4 rounded-full font-headline font-bold text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(255,255,255,0.1)] flex items-center gap-2" style="">
+      开始你的日志分析
+      <span class="material-symbols-outlined text-xl" style="">trending_flat</span>
+</button>
+</div>
+</div><p class="" style=""></p>
+<!-- CTA Button -->
+</section>
+<!-- Hero Video Section -->
+<div class="relative w-full z-10 pointer-events-none select-none -mt-20">
+<div class="absolute inset-0 z-20 pointer-events-none">
+<!-- Side and bottom fades -->
+<div class="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#010101] to-transparent"></div>
+<div class="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#010101] to-transparent"></div>
+<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#010101] to-transparent"></div>
+</div>
+<video autoplay="" class="w-full mix-blend-screen opacity-60" data-alt="Abstract dynamic light flows in dark space" loop="" muted="" playsinline="" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Crect width='100%25' height='100%25' fill='%23010101'/%3E%3C/svg%3E">
+<source src="https://customer-cbeadsgr09pnsezs.cloudflarestream.com/697945ca6b876878dba3b23fbd2f1561/downloads/default.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
+</div>
+<!-- Logo Cloud -->
+<section class="relative z-30 px-4 mt-12">
+<div class="max-w-7xl mx-auto bg-black/20 backdrop-blur-sm border-t border-white/5 rounded-t-3xl overflow-hidden py-12 px-8">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="flex items-center gap-6 flex-shrink-0">
+<span class="font-label text-xs uppercase tracking-widest text-white/40 whitespace-nowrap" style=""><br/></span>
+<div class="hidden md:block w-[1px] h-12 bg-white/10"></div>
+</div>
+<div class="relative w-full overflow-hidden mask-fade-side">
+<div class="animate-scroll">
+<!-- Logos Duplicated for Infinite Loop -->
+<div class="flex items-center gap-16 px-8 grayscale brightness-200 contrast-0">
+<img alt="OpenAI" class="h-6 w-auto" data-alt="OpenAI brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQub-LFBZ8VwJxz4LeP6KJbPcOkFdK8oaBAdSLuej_IsgJbHYowGDYqIiYbiXyy9X3_NTN3acM4YbYNWWDLDgL7djLL4sCh39tlmZH_XFd4n8_bRhz6QxQXql-iuqk5uuqpuPQL9uqE5S3JUG4HoCxkC7tPG79-gy_5Ar597v4ZA3Edkc81htJO6cFP_8Wa9H0-ImhxqihSUQiVrTuzXRBEoB-gljhC-B-b8ZdlPJfNpeD8S1Vs86ZtwrInlaNiw1KMX6ZqJGTREfF" style=""/>
+<img alt="NVIDIA" class="h-6 w-auto" data-alt="NVIDIA brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiPo-yuALQPisCqvzDAfWEH6Bx9WJ3FzrFagPMa8cV34w-IZK8WZbB7YJ5o-nU-wwqfK9olGdqB8fJv-ardoHc9mDvCGI_nmkQ6tOj1sYQh6tdUpi2Yelb0YBUfnE2BVB2rXGwveYGDCHjudelY14KKbhYUKs7_StVaz9dXz_XBbM6g-5EwkxxFMa0puH6EskFCrSf7pqatK_zLJWpGkOHbiURZ2T00G8q58k8iLWGJEx22i0kXU9vN3dKOuxB_RhBkeBX1ZnapgUz" style=""/>
+<img alt="Github" class="h-8 w-auto brightness-0 invert" data-alt="Github brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVXW8XMRkl9m9Q158AqVjN3INZdPt54P5VMXWTYGoE0bNMZI3vRBazrXprPq-J4bWPvWZxPBT1Yunq8UlmU71vmAIzoBH91umIva6qq2N4U4vgSZz1WHXkapUCPeLlOz8zh0ogGbh6uM6DHyQN2q9qQPJRNDbBOvoqEh-DBrqgQK_6rDWdtAFtoZsu6ac0iXBldW9-TSjK-DnzQ-vn_tRQYSVt4SIj3cBBM-PtiUXagsHp1t9I4bgPm27EA7Fhi4gpkk-gJo3EWNnm" style=""/>
+<img alt="Slack" class="h-8 w-auto brightness-0 invert" data-alt="Slack brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyIa5b5fwnk5HL4r8_mEMa7vwucwiK7Fc8kJq8rhTo5gPLcWG2YNO2GaZwxFa9uwjrhSCevYVVr_-9zloZIchsP-F9SUILUeEBxN13-eWgVa568xQqGW_HwmpgVZ1nd8AUUybQ8Gyk7teKmjXLlqmsoz3bK_ZFMegJT1R03oxP_zjT_GqSCBe_yk8vh_FcAx-DEkRcqjNUHnheo0d2kgiHubkRK1b5YiLiy00Tr_lwBhBZbQXboshbXg9MbMh4e_TmQjTE2xYlMY2E" style=""/>
+<img alt="Stripe" class="h-8 w-auto brightness-0 invert" data-alt="Stripe brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH6zl2a5djBj63LMa7RH_E3gFxmEHw4T1pOx2Xl_NGYJkitHe8hWE5Pz53mi_j9bx-wZTJ7elau1_To3ZC89iQFe9rUJHzAL18GtQWcH3EavJbZjTcXuhEGYFZL5m3WvsjnNr3jA11qgg3JOEehvwfUoaj0RJqJ9B49njudVypTrK1HNhkqlHICPx8tWiyulCne5-6wsx1eIpBobCERjih7VEF6Np2SHCSxz_J5A8jNz3lPQieg7P6f8bfKwtcL3mF1vn_Ygz5FWIM" style=""/>
+<img alt="Amazon" class="h-8 w-auto brightness-0 invert" data-alt="Amazon brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvd4nT8KOgcIo40S16d5famsc7M9VHGdTszy9vMBlja-aijoT5AcFu4c55DKafAMO2yXaHPMK04rqHHOim96YCkiToR4ZXbyAGGB4WArvWehp2yavBj-Joc4pkrf7z73qizqTTw8RJ1E3NpSsIoHQBYFFYzbaaxY4VGZfsQ4qrJTX0M1kYFUjEuYkEZwy1T7T7h7iITIZCu-MLavzNrMztPaAxBG9UMVSEyz2zxsg2VN12MHmGgVZYPf3TWCiP-hef7yz5sz7Zn_Bt" style=""/>
+</div>
+<div class="flex items-center gap-16 px-8 grayscale brightness-200 contrast-0">
+<img alt="OpenAI" class="h-6 w-auto" data-alt="OpenAI brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXHTKh11uhNJ57m62kFfYwNomJoSXdagmO4Qs-W4s7ZOBs2y2SbtzRhayHu-V6bwZBuEBEIK2KXbKCRM5wqA7BlWxJYd2fsgtWmxzIER6z6tgvw_cLqvt0yYrkmfj6qzZ5YR-OT7Ej_Sdo82FAx3IVVzO51EW5Kctmc2FCakMRBZZINKWj_3BJu6QRVi7EnTj1gFVEVF1-kEFb-lZri1wM1_3sdBxmHyDxKyuBVeiVjceqFmoQVBHwRvJAJ2s-KHpF0inyKypQl5QT" style=""/>
+<img alt="NVIDIA" class="h-6 w-auto" data-alt="NVIDIA brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPNz4_vmiKOrlw2Pj6eLw21PFxa_ubmqtFr-uhwYgoowxEEh5kOf5JoiMXmugxLhIzR9TPwn9WZCnDxbFQLlidSll8-b2zUAdniKuEOP3B6qiN5itoU2J5Mc7etThH4C2wUGUxSd55wAumWVbyNCD8Z9ia0jvZeIecg30qAWt0f3ciH-bV9g6cwv5tx3TF3Kny1nj-1S1FkQnYUpCf3om1gWh1iQaZIou1zt9gXhL7DULo-0kC0U-Htcug6hZzO56vYStHB9Bs0_gf" style=""/>
+<img alt="Github" class="h-8 w-auto brightness-0 invert" data-alt="Github brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeOW-8ZTl29kld3EWnCRkjQ6cqKvEa_eZBh5EvwOam-XFWC6B48Xminox168QSSbQgNs28kgwYT-CH1p4ZDot4Jg_xqTLMWNhVuwgHMZLoRu8Pc5iMISBI6_wUpY6pP3_PKpHwbDWr9Aa6UUqJ0BnqVces4xBkPasNX7pUIbt3BMX_FQ1Bf8B0DwnNSsSjblJzVcoWH4OAV18PNXQKjkPxOR5Wc_Ckk3dtaYmCb2_1eN9iQBj_QFhqV_0wkZ5J1kjPqlO6DCPRNZ_b" style=""/>
+<img alt="Slack" class="h-8 w-auto brightness-0 invert" data-alt="Slack brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvTvcOkpLfarXQB_swOXWJkYzqWFezBRCCGhdzB--HUghfaIbqSOsBeEkh_VAsqA6J6bT8Xy_ptQbtqbn9owWQzPmxnlQSn402Ki-iPpnt7bsfeEeQxxCLST2-oK7bP7lP9l-cYNtFYJ3FFg-VG7SYVxMaHSj1sIenWX8TY-zUpT3IkV5yMQW2wu-jjj_ph56St9f6y51psb55YpdqxLYMhpFFhJddL3gHC43T0pSAzHbv_E4oVPHn9tPOdecBEaQP32OUGZL0_iax" style=""/>
+<img alt="Stripe" class="h-8 w-auto brightness-0 invert" data-alt="Stripe brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM5a4RlrOLPDBJ9FDzu3rJk2MmBr42u9yJzJ6xUTpycjavYOGxor4AZG9aPJ_20IZTuYqraj6rZiIM_Q6IhLKwNLnmlIoQ3KIA-17B409-4g0mfhilkbuf4IJ43_e4RPEhv1bG_jAfi9WuD18x5jGMNc_6FcuKPJdDcZ0P1fNcvcp_RuiIlmS_m-kBl8w1C7Gh4DwF077VBQWU5J3WqEbSw38695hgGc7zmMJqKNJtVPTqH-nQLpRmrc9K_dfo6kocPZTmzYDxTL2T" style=""/>
+<img alt="Amazon" class="h-8 w-auto brightness-0 invert" data-alt="Amazon brand logo white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3_V0A4O93-EnyEUIwNtDlUzgaqnHagf7z1t0yW-oh__i5BIz3B3irCviMc9OiBUvFfdpPLj4FTXNnA4SfSFYNvjzN5v6CfGu05eNMCNS2aXVzIpQwDynr8yrY-MDuUx6eZtgubiGNxpC4ZDA8-Vu4KiwSqQ4Xzgpe3yFtatT8pjVUN6gM6TrENchJLYfloQiyEvCDI2zpyKUpW02CDitNEsZ1ujO4U0xvu-9wshbiZ5sLOyBR34FShX0KHsI9Z4XRwTixBtzyH5aa" style=""/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
